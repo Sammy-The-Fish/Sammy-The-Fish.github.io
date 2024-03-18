@@ -11,24 +11,37 @@
         <h1 id="MainTitle"><center>WELCOME TO MY WEBSITE</center></h1>
     </div>
     <div class = "MenuBar">
-        <button class="MenuButton">Home</button>
+        <button class="MenuButton", onclick="TransHome()">Home</button>
         <button class="MenuButton", onclick="TransProject()">My projects</button>
-        <button class="MenuButton">Contact Me</button>
+        <button class="MenuButton", onclick="TransContact()">Contact Me</button>
     </div>
-    <div class="horizontal", id="HomeDiv">
-        <div class="center content">
-            <h3 class>About Me:</h3>
-            <p>Hello I am Sam, studying Computer Science. In fact I actually quite enjoy it. I made this website but am now realising that I have no need or use for a website. Oh well, at least it looks cool i guess</p>
+    <div id="HomeDiv">
+        <div class="horizontal">
+            <div class="center content">
+                <h3 class>About Me:</h3>
+                <p>Hello I am Sam, studying Computer Science. In fact I actually quite enjoy it. I made this website but am now realising that I have no need or use for a website. Oh well, at least it looks cool i guess</p>
+            </div>
+            <div class="center content">
+                <h3>Links:</h3>
+                <ul>
+                    <li><a href="https://github.com/Sammy-the-Fish/">Github</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                    <li><a href="https://youtu.be/sAp40YBopns?t=14">Very Important link </a></li>
+                </ul>
+            </div>
         </div>
-        <div class="center content">
-            <h3>Links:</h3>
-            <ul>
-                <li><a href="https://github.com/Sammy-the-Fish/">Github</a></li>
-                <li><a href="./contact.html">Contact</a></li>
-                <li><a href="https://www.youtube.com/watch?v=sAp40YBopns">Very Important link </a></li>
-            </ul>
+    </div>
+    <div id="ProjectDiv">
+        <div class="horizontal">
+            <div class="center content">
+                <h3 class>Discord Ai bot</h3>
+                <p>Project I have made and am looking into uploading onto github, however the code is a mess so I prolly won't</p>
+            </div>
+            <div class="center content">
+                <h3 class>Other Projects</h3>
+                <p>Lol u think i've dont other shit, Nah Heisenbot takes up all my time (as he should. not complaining)</p>
+            </div>
         </div>
-        <br>
     </div>
     <script src="script.js"></script> 
 </body>

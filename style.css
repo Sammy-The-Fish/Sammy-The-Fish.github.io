@@ -1,6 +1,7 @@
 body {
     background-color: #1E1D2F;
     font-family: Jetbrains Mono;
+    overflow-x: hidden;
 }
 
 h1{
@@ -77,4 +78,16 @@ a:visited{
     padding-right: 100px;
     display: flex;
     justify-content: space-around;
+}
+
+#HomeDiv{
+    position: absolute;
+    left:0%;
+    width: 100%;
+}
+
+#ProjectDiv{
+    position: absolute;
+    left:100%;
+    width: 100%;
 }
