@@ -1,0 +1,26 @@
+body {
+    background-color: #1E1D2F;
+    font-family: Jetbrains Mono;
+}
+
+h1{
+    color: #F28FAD;
+    font-size: 104px;
+}
+
+.content{
+    background-color: #302D41;
+    color: #FAE3B0;
+    border-radius: 20px;
+    margin: 25px;
+}
+
+.center {
+    width: 25%;
+    padding: 10px;
+}
+
+.horizontal{
+    display: flex;
+    justify-content: center;
+}
