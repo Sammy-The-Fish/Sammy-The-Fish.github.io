@@ -6,6 +6,19 @@ body {
 h1{
     color: #F28FAD;
     font-size: 104px;
+    margin-bottom: 0px;
+}
+
+a:link{
+    color: #96CDFB;
+}
+
+a:visited{
+    color: #DDB6F2
+}
+
+.contentHeader{
+    padding: 5px;
 }
 
 .content{
@@ -23,4 +36,31 @@ h1{
 .horizontal{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    
+}
+
+.vertical{
+    display: flex;
+}
+
+.MenuBar{
+    width: 54%;
+    margin-left: auto;
+    margin-right: auto;
+    height:auto;
+    padding: 0.01px;
+    background-color: #302D41;
+    color: #F2CDCD;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.MenuBarItem{
+    margin: 5px;
+    padding-left: 15px;
+    padding-right: 100px;
+    display: flex;
+    justify-content: space-around;
 }
