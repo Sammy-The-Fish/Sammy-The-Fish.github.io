@@ -1,4 +1,6 @@
-
+const ProjectDiv = document.getElementById("ProjectDiv")
+const HomeDiv = document.getElementById("HomeDiv")
+const ContactDiv = document.getElementById("ContactDiv")
 
 
 var CurrentPosition = 0;
@@ -24,7 +26,8 @@ function TransProject(){
 
 function TransContact(){
     console.log("test")
-    alert("Go away off, not made yet 😡")
+    TargetPosition = 2
+    Transition()
 }
 
 function Transition() {
@@ -32,8 +35,6 @@ function Transition() {
     if (CurrentPosition == TargetPosition){
         return
     }
-    const ProjectDiv = document.getElementById("ProjectDiv")
-    const HomeDiv = document.getElementById("HomeDiv")
     console.log("HELLOW :3")
     let id = null;
     let pos = 0;
@@ -41,15 +42,18 @@ function Transition() {
 
     if (TargetPosition > CurrentPosition){
         anim_step = -1
-        target = -100
-        start = 0
     }else{
         anim_step = +1
-        target = 0
-        start = -100
     }
 
-    let time = 0
+    if (Math.abs(CurrentPosition - TargetPosition) == 2){
+        console.log("Testing " + CurrentPosition + " target " + TargetPosition)
+        anim_step *= 2;
+    }
+
+    start = (0 - CurrentPosition) * 100
+
+    var time = 0
     function frame() {
         if (time == 100) {
             clearInterval(id);
@@ -58,8 +62,10 @@ function Transition() {
             time++
             pos = ((anim_step * easeInOutCubic(time/100)) * 100) + start
             ProjectPos = pos + 100
+            ContactPos = pos + 200
             HomeDiv.style.left = pos + '%';
             ProjectDiv.style.left = ProjectPos + '%'
+            ContactDiv.style.left = ContactPos + "%"
         }
       }
       
