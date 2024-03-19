@@ -7,14 +7,14 @@ let Menu = [HomeButton, ProjectButton, ContactButton]
 var CurrentPosition = 0;
 var TargetPosition
 
-// for(let i=0; i < Menu.length; i++){
-//     if(i == CurrentPosition){
-//         Menu[i].style.backgroundColor = "#575268"
-//     }else{
-//         Menu[i].style.backgroundColor = "#302D41"
-//     }
-// }
-
+for(let i=0; i < Menu.length; i++){
+    if(i == CurrentPosition){
+        console.log("ITS WORKING MAYBE")
+        Menu[i].style.textDecorationLine = "underline"
+    }else{
+        Menu[i].style.textDecorationLine = "none"
+    }
+}
 
 
 
@@ -69,14 +69,14 @@ function Transition() {
         if (time == 100) {
             clearInterval(id);
             CurrentPosition = TargetPosition
-            // for(let i=0; i < Menu.length; i++){
-            //         if(i == CurrentPosition){
-            //             console.log("ITS WORKING MAYBE")
-            //             Menu[i].style.backgroundColor = "#575268"
-            //         }else{
-            //             Menu[i].style.backgroundColor = "#302D41"
-            //         }
-            // }
+            for(let i=0; i < Menu.length; i++){
+                    if(i == CurrentPosition){
+                        console.log("ITS WORKING MAYBE")
+                        Menu[i].style.textDecorationLine = "underline"
+                    }else{
+                        Menu[i].style.textDecorationLine = "none"
+                    }
+            }
         } else {
             time++
             pos = ((anim_step * easeInOutCubic(time/100)) * 100) + start
