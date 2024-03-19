@@ -4,8 +4,10 @@ const ContactButton = document.getElementById("ContactButton")
 const LinuxButton = document.getElementById("LinuxButton")
 
 
-let Menu = [HomeButton, ProjectButton, ContactButton]
+let Menu = [HomeButton, ProjectButton, ContactButton, LinuxButton]
 
+
+var animating = 0;
 var CurrentPosition = 0;
 var TargetPosition
 
@@ -26,14 +28,31 @@ var FirstPage = pages[0]
 var Enterid = setInterval(FloatInFrame, 10)
 
 
+apiUrl = "http://127.0.0.1:8000"
+
+fetch(apiUrl)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
+  .then(data => {
+    console.log(data);
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
+
+test = fetch(apiUrl)
+
+
 var time = 0
 function FloatInFrame(){
     if (time == 200){
         clearInterval(Enterid)
     }else{
-        console.log("is this running?");
         time++;
-        console.log(time);
         for(let i=0; i < pages.length; i++){
             pages[i].style.marginTop =  (100 - (easeOutQuint(time/200) * 100)) + "%";
         }
@@ -42,6 +61,9 @@ function FloatInFrame(){
 
 
 function TransHome(){
+    if (animating){
+        return
+    }
     TargetPosition = 0
     Transition()
 }
@@ -49,57 +71,67 @@ function TransHome(){
 
 
 function TransProject(){
+    if (animating){
+        return
+    }
     TargetPosition = 1
     Transition()
 }
 
 
 function TransContact(){
-    console.log("test")
+    if (animating){
+        return
+    }
     TargetPosition = 2
     Transition()
 }
 
 function TransLinux(){
-    console.log("test linux")
+    if (animating){
+        return
+    }
     TargetPosition = 3
     Transition()
 }
 
 
 function Transition() {
+
+    if (animating){
+        return
+    }else if (TargetPosition == CurrentPosition){
+        return
+    }
     const ProjectDiv = document.getElementById("ProjectDiv")
     const HomeDiv = document.getElementById("HomeDiv")
     const ContactDiv = document.getElementById("ContactDiv")
     const LinuxDiv = document.getElementById("LinuxDiv")
 
-    console.log("TARGET: " + TargetPosition + " CURRENT: " + CurrentPosition)
-    if (CurrentPosition == TargetPosition){
-        return
-    }
-    console.log("HELLOW :3")
+
     let id = null;
     let pos = 0;
-    id = setInterval(frame, 1);
-
+    
     if (TargetPosition > CurrentPosition){
         anim_step = -1
     }else{
         anim_step = +1
     }
-
+    
+    animating = true
     anim_step *= Math.abs(TargetPosition - CurrentPosition) 
-
     start = (0 - CurrentPosition) * 100
-
     var time = 0
+    
+    
+    id = setInterval(frame, 1);
     function frame() {
         if (time == 100) {
+            animating = false;
             clearInterval(id);
             CurrentPosition = TargetPosition
             for(let i=0; i < Menu.length; i++){
                     if(i == CurrentPosition){
-                        console.log("ITS WORKING MAYBE")
                         Menu[i].style.textDecorationLine = "underline"
                     }else{
                         Menu[i].style.textDecorationLine = "none"
