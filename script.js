@@ -2,15 +2,20 @@ const HomeButton = document.getElementById("HomeButton")
 const ProjectButton = document.getElementById("ProjectButton")
 const ContactButton = document.getElementById("ContactButton")
 
-
 let Menu = [HomeButton, ProjectButton, ContactButton]
 
 var CurrentPosition = 0;
 var TargetPosition
 
-for(i =0; i<1; i+=0.01){
-    console.log(easeInOutCubic(i))
-}
+// for(let i=0; i < Menu.length; i++){
+//     if(i == CurrentPosition){
+//         Menu[i].style.backgroundColor = "#575268"
+//     }else{
+//         Menu[i].style.backgroundColor = "#302D41"
+//     }
+// }
+
+
 
 
 function TransHome(){
@@ -64,12 +69,14 @@ function Transition() {
         if (time == 100) {
             clearInterval(id);
             CurrentPosition = TargetPosition
-            for(let i=0; i < Menu.length; i++){
-                    if(i == TargetPosition){
-                        console.log("ITS WORKING MAYBE")
-                        Menu[i].style.backgroundColor = "#00FF00"
-                    }
-            }
+            // for(let i=0; i < Menu.length; i++){
+            //         if(i == CurrentPosition){
+            //             console.log("ITS WORKING MAYBE")
+            //             Menu[i].style.backgroundColor = "#575268"
+            //         }else{
+            //             Menu[i].style.backgroundColor = "#302D41"
+            //         }
+            // }
         } else {
             time++
             pos = ((anim_step * easeInOutCubic(time/100)) * 100) + start
