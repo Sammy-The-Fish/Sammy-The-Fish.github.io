@@ -9,13 +9,34 @@ var TargetPosition
 
 for(let i=0; i < Menu.length; i++){
     if(i == CurrentPosition){
-        console.log("ITS WORKING MAYBE")
         Menu[i].style.textDecorationLine = "underline"
     }else{
         Menu[i].style.textDecorationLine = "none"
     }
 }
 
+
+const pages = document.getElementsByClassName("page")
+var FirstPage = pages[0]
+
+
+
+var Enterid = setInterval(FloatInFrame, 10)
+
+
+var time = 0
+function FloatInFrame(){
+    if (time == 200){
+        clearInterval(Enterid)
+    }else{
+        console.log("is this running?");
+        time++;
+        console.log(time);
+        for(let i=0; i < pages.length; i++){
+            pages[i].style.top =  (100 - (easeOutCirc(time/200) * 100)) + "%";
+        }
+    }
+}
 
 
 function TransHome(){
@@ -95,4 +116,9 @@ function Transition() {
 
 function easeInOutCubic(x) {
     return x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
+    }
+
+function easeOutCirc(x){
+    return Math.sqrt(1 - Math.pow(x - 1, 2));
+    
     }

@@ -8,32 +8,40 @@
 </head>
 <body>
     <div>
-        <h1 id="MainTitle"><center>WELCOME TO MY WEBSITE</center></h1>
+        <h1 id="MainTitle"><center>Samuel Newman</center></h1>
     </div>
     <div class = "MenuBar">
-        <button id="HomeButton", class="MenuButton", onclick="TransHome()">Home</button>
-        <button id="ProjectButton", class="MenuButton", onclick="TransProject()">My projects</button>
-        <button id= "ContactButton", class="MenuButton", onclick="TransContact()">Contact Me</button>
+        <button id="HomeButton" class="MenuButton" onclick="TransHome()">Home</button>
+        <button id="ProjectButton" class="MenuButton" onclick="TransProject()">My projects</button>
+        <button id= "ContactButton" class="MenuButton" onclick="TransContact()">Contact Me</button>
     </div>
-    <div id="HomeDiv">
+    <div id="HomeDiv" class="page">
         <div class="horizontal">
-            <div class="center content">
-                <h3 class>About Me:</h3>
-                <p>Hello I am Sam, studying Computer Science. In fact I actually quite enjoy it. 
-                    I made this website but am now realising that I have no need or use for a website. 
-                    Oh well, at least it looks cool i guess</p>
+            <div class="center vertical">
+                <div class="content">
+                    <h3 class>About Me:</h3>
+                    <p>Hello I am Sam, studying Computer Science. In fact I actually quite enjoy it. 
+                        I made this website but am now realising that I have no need or use for a website. 
+                        Oh well, at least it looks cool i guess</p>
+                </div>
+                <div class="content">
+                    <h3 class>Evelyn Says::</h3>
+                    <p>I will rule the wold, one day and you shall all perish under my wrath. You will all become my pookie bears!!!</p>
+                </div>
             </div>
-            <div class="center content">
-                <h3>Links:</h3>
-                <ul>
-                    <li><a href="https://github.com/Sammy-the-Fish/">Github</a></li>
-                    <li><a href="./contact.html">Contact</a></li>
-                    <li><a href="https://youtu.be/sAp40YBopns?t=14">Very Important link </a></li>
-                </ul>
+            <div class="center vertical">
+                <div class="content">
+                    <h3>Links:</h3>
+                    <ul>
+                        <li><a href="https://github.com/Sammy-the-Fish/">Github</a></li>
+                        <li><a onclick="TransContact()">E-mail (doesn't look like link rn but is)</a></li>
+                        <li><a href="https://youtu.be/sAp40YBopns?t=14">Very Important link </a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
-    <div id="ProjectDiv">
+    <div id="ProjectDiv" class="page">
         <div class="horizontal">
             <div class="center vertical">
                 <div class=" content">
@@ -53,7 +61,7 @@
             </div>
         </div>
     </div>
-    <div id="ContactDiv">
+    <div id="ContactDiv" class="page">
         <div class="horizontal">
             <div class="center content">
                 <h3 class>E-mail</h3>
