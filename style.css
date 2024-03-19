@@ -1,13 +1,18 @@
+@font-face {
+    font-family: JetBrainsMono;
+    src: url(JetBrainsMono.ttf);
+ }
+
 body {
     background-color: #1E1D2F;
-    font-family: Jetbrains Mono;
+    font-family: JetbrainsMono;
     overflow-x: hidden;
 }
 
 h1{
     color: #F28FAD;
     font-size: 104px;
-    margin-bottom: 0px;
+    margin: 0px;
 }
 
 a:link{
@@ -24,7 +29,7 @@ a:visited{
     color: #ABE9B3;
     border-radius: 30px;
     padding: 5px;
-    font-family: Jetbrains Mono;
+    font-family: JetbrainsMono;
     font-size: 20px;
 }
 .MenuButton:hover{
@@ -37,10 +42,13 @@ a:visited{
 }
 
 .content{
+    position: relative;
     background-color: #302D41;
     color: #FAE3B0;
     border-radius: 20px;
     margin: 25px;
+    /* padding: 10px;
+    width: 90%; */
 }
 
 .center {
@@ -57,6 +65,8 @@ a:visited{
 
 .vertical{
     display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .MenuBar{
