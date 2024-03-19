@@ -114,7 +114,7 @@ function Transition() {
             HomeDiv.style.left = pos + '%';
             ProjectDiv.style.left = ProjectPos + '%'
             ContactDiv.style.left = ContactPos + "%"
-            LinuxPos.style.left = LinuxPos + "%"
+            LinuxDiv.style.left = LinuxPos + "%"
         }
       }
       
