@@ -24,7 +24,7 @@ function TransProject(){
 
 function TransContact(){
     console.log("test")
-    alert("Fuck off, not made yet 😡")
+    alert("Go away off, not made yet 😡")
 }
 
 function Transition() {
