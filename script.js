@@ -1,7 +1,9 @@
-const ProjectDiv = document.getElementById("ProjectDiv")
-const HomeDiv = document.getElementById("HomeDiv")
-const ContactDiv = document.getElementById("ContactDiv")
+const HomeButton = document.getElementById("HomeButton")
+const ProjectButton = document.getElementById("ProjectButton")
+const ContactButton = document.getElementById("ContactButton")
 
+
+let Menu = [HomeButton, ProjectButton, ContactButton]
 
 var CurrentPosition = 0;
 var TargetPosition
@@ -31,6 +33,10 @@ function TransContact(){
 }
 
 function Transition() {
+    const ProjectDiv = document.getElementById("ProjectDiv")
+    const HomeDiv = document.getElementById("HomeDiv")
+    const ContactDiv = document.getElementById("ContactDiv")
+
     console.log("TARGET: " + TargetPosition + " CURRENT: " + CurrentPosition)
     if (CurrentPosition == TargetPosition){
         return
@@ -58,6 +64,12 @@ function Transition() {
         if (time == 100) {
             clearInterval(id);
             CurrentPosition = TargetPosition
+            for(let i=0; i < Menu.length; i++){
+                    if(i == TargetPosition){
+                        console.log("ITS WORKING MAYBE")
+                        Menu[i].style.backgroundColor = "#00FF00"
+                    }
+            }
         } else {
             time++
             pos = ((anim_step * easeInOutCubic(time/100)) * 100) + start
