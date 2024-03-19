@@ -33,7 +33,7 @@ function FloatInFrame(){
         time++;
         console.log(time);
         for(let i=0; i < pages.length; i++){
-            pages[i].style.top =  (100 - (easeOutCirc(time/200) * 100)) + "%";
+            pages[i].style.marginTop =  (100 - (easeOutQuint(time/200) * 100)) + "%";
         }
     }
 }
@@ -118,7 +118,8 @@ function easeInOutCubic(x) {
     return x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
     }
 
-function easeOutCirc(x){
-    return Math.sqrt(1 - Math.pow(x - 1, 2));
-    
-    }
+
+
+function easeOutQuint(x){
+    return 1 - Math.pow(1 - x, 5);
+}
