@@ -56,11 +56,10 @@ button:hover{
     border-radius: 20px;
     margin: 25px;
     padding: 10px;
-    width: 90%;
 }
 
 .center {
-    width: 25%;
+    width: 30%;
     padding: 10px;
 }
 
@@ -118,3 +117,6 @@ button:hover{
     left: 200%;
 }
 
+#LinuxDiv{
+    left: 300%;
+}

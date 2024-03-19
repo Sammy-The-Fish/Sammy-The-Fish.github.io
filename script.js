@@ -1,6 +1,8 @@
 const HomeButton = document.getElementById("HomeButton")
 const ProjectButton = document.getElementById("ProjectButton")
 const ContactButton = document.getElementById("ContactButton")
+const LinuxButton = document.getElementById("LinuxButton")
+
 
 let Menu = [HomeButton, ProjectButton, ContactButton]
 
@@ -58,10 +60,18 @@ function TransContact(){
     Transition()
 }
 
+function TransLinux(){
+    console.log("test linux")
+    TargetPosition = 3
+    Transition()
+}
+
+
 function Transition() {
     const ProjectDiv = document.getElementById("ProjectDiv")
     const HomeDiv = document.getElementById("HomeDiv")
     const ContactDiv = document.getElementById("ContactDiv")
+    const LinuxDiv = document.getElementById("LinuxDiv")
 
     console.log("TARGET: " + TargetPosition + " CURRENT: " + CurrentPosition)
     if (CurrentPosition == TargetPosition){
@@ -78,10 +88,7 @@ function Transition() {
         anim_step = +1
     }
 
-    if (Math.abs(CurrentPosition - TargetPosition) == 2){
-        console.log("Testing " + CurrentPosition + " target " + TargetPosition)
-        anim_step *= 2;
-    }
+    anim_step *= Math.abs(TargetPosition - CurrentPosition) 
 
     start = (0 - CurrentPosition) * 100
 
@@ -103,9 +110,11 @@ function Transition() {
             pos = ((anim_step * easeInOutCubic(time/100)) * 100) + start
             ProjectPos = pos + 100
             ContactPos = pos + 200
+            LinuxPos = pos + 300
             HomeDiv.style.left = pos + '%';
             ProjectDiv.style.left = ProjectPos + '%'
             ContactDiv.style.left = ContactPos + "%"
+            LinuxPos.style.left = LinuxPos + "%"
         }
       }
       
