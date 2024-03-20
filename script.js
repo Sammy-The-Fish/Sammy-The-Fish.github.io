@@ -28,33 +28,24 @@ let PageDiv = FirstPage.children[0]
 let LeftDiv = PageDiv.children[0]
 let RightDiv = PageDiv.children[1]
 
+let FirstDiv = LeftDiv.children.length > RightDiv.children.length ? LeftDiv : RightDiv
+let LastDiv = LeftDiv.children.length > RightDiv.children.length ? RightDiv : LeftDiv
 
-for (let child of PageDiv.children) {
-    console.log(child);
+console.log(FirstDiv.children)
+console.log(LastDiv.children)
+
+let DivArray = []
+
+for (let i = 0; i < LastDiv.children.length; i++){
+    DivArray.push(FirstDiv.children[i])
+    DivArray.push(LastDiv.children[i])
+}for (let i = LastDiv.children.length; i< FirstDiv.children.length; i++){
+    DivArray.push(FirstDiv.children[i])
 }
 
+console.log(DivArray)
 
 var Enterid = setInterval(FloatInFrame, 10)
-
-
-// apiUrl = "http://127.0.0.1:8000"
-
-// fetch(apiUrl)
-//   .then(response => {
-//     if (!response.ok) {
-//       throw new Error('Network response was not ok');
-//     }
-//     return response.json();
-//   })
-//   .then(data => {
-//     console.log(data);
-//   })
-//   .catch(error => {
-//     console.error('Error:', error);
-//   });
-
-// test = fetch(apiUrl)
-
 
 
 
@@ -65,9 +56,12 @@ function FloatInFrame(){
         clearInterval(Enterid)
     }else{
         time++;
-        for(let i=0; i < pages.length; i++){
-            pages[i].style.marginTop =  (100 - (easeOutQuint(time/200) * 100)) + "%";
+        for(let i = 0; i < DivArray.length; i++){
+        DivArray[i].style.marginTop =  (200 - (easeOutQuint(time/200) * 200)) + "%";
         }
+        // for(let i=0; i < pages.length; i++){
+        //     pages[i].style.marginTop =  (100 - (easeOutQuint(time/200) * 100)) + "%";
+        // }
     }
 }
 
