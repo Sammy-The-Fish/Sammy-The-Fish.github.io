@@ -23,28 +23,40 @@ for(let i=0; i < Menu.length; i++){
 const pages = document.getElementsByClassName("page")
 var FirstPage = pages[0]
 
+let PageDiv = FirstPage.children[0]
+
+let LeftDiv = PageDiv.children[0]
+let RightDiv = PageDiv.children[1]
+
+
+for (let child of PageDiv.children) {
+    console.log(child);
+}
 
 
 var Enterid = setInterval(FloatInFrame, 10)
 
 
-apiUrl = "http://127.0.0.1:8000"
+// apiUrl = "http://127.0.0.1:8000"
 
-fetch(apiUrl)
-  .then(response => {
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-    return response.json();
-  })
-  .then(data => {
-    console.log(data);
-  })
-  .catch(error => {
-    console.error('Error:', error);
-  });
+// fetch(apiUrl)
+//   .then(response => {
+//     if (!response.ok) {
+//       throw new Error('Network response was not ok');
+//     }
+//     return response.json();
+//   })
+//   .then(data => {
+//     console.log(data);
+//   })
+//   .catch(error => {
+//     console.error('Error:', error);
+//   });
 
-test = fetch(apiUrl)
+// test = fetch(apiUrl)
+
+
+
 
 
 var time = 0
