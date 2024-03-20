@@ -45,7 +45,7 @@ for (let i = 0; i < LastDiv.children.length; i++){
 
 console.log(DivArray)
 
-var Enterid = setInterval(FloatInFrame, 10)
+var Enterid = setInterval(FloatInFrame, 0.1)
 
 
 
@@ -57,11 +57,12 @@ function FloatInFrame(){
     }else{
         time++;
         for(let i = 0; i < DivArray.length; i++){
-        DivArray[i].style.marginTop =  (200 - (easeOutQuint(time/200) * 200)) + "%";
+            if (i %2 == 0){
+                DivArray[i].style.marginTop =  (200 - (easeOutQuint(time/200) * 200)) + "%";
+            }else{
+                DivArray[i].style.marginTop =  (150 - (easeOutQuint(time/200) * 150)) + "%";
+            }
         }
-        // for(let i=0; i < pages.length; i++){
-        //     pages[i].style.marginTop =  (100 - (easeOutQuint(time/200) * 100)) + "%";
-        // }
     }
 }
 
@@ -132,7 +133,8 @@ function Transition() {
     
     id = setInterval(frame, 1);
     function frame() {
-        if (time == 100) {
+        let length = 60
+        if (time == length) {
             animating = false;
             clearInterval(id);
             CurrentPosition = TargetPosition
@@ -145,7 +147,7 @@ function Transition() {
             }
         } else {
             time++
-            pos = ((anim_step * easeInOutCubic(time/100)) * 100) + start
+            pos = ((anim_step * easeInOutCubic(time/length)) * 100) + start
             ProjectPos = pos + 100
             ContactPos = pos + 200
             LinuxPos = pos + 300

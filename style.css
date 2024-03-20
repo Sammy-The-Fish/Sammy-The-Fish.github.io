@@ -70,6 +70,10 @@ img{
     margin-top: 200%;
 }
 
+.frontRight{
+    margin-top: 250%
+}
+
 .center {
     width: 30%;
     padding: 10px;
@@ -116,6 +120,11 @@ img{
     height: 100%;
 }
 
+.fakeLink{
+    cursor: pointer;
+    color: #96CDFB;
+    text-decoration: underline;
+}
 
 #HomeDiv{
     left:0%;    
