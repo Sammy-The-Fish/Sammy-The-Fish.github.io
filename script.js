@@ -7,8 +7,7 @@ const LinuxButton = document.getElementById("LinuxButton")
 let Menu = [HomeButton, ProjectButton, ContactButton, LinuxButton]
 
 
-// if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-if(true){
+if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
     var elements = document.getElementsByClassName("horizontal")
     for (let i = 0; i < elements.length; i++){
         elements[i].style.flexDirection = "collumn"
