@@ -7,12 +7,11 @@ const LinuxButton = document.getElementById("LinuxButton")
 let Menu = [HomeButton, ProjectButton, ContactButton, LinuxButton]
 
 
-if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-    // document.write("THIS IS MOBILE< THIS IS MOBILE THIS IS MOBILE")
+// if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+if(true){
     var elements = document.getElementsByClassName("horizontal")
     for (let i = 0; i < elements.length; i++){
         elements[i].style.flexDirection = "collumn"
-        document.write("this is mobile \n this is mobile \n this is mobile")
     }
     var elements = document.getElementsByClassName("vertical")
     for (let i = 0; i < elements.length; i++){
@@ -23,10 +22,12 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
     var elements = document.getElementsByClassName("horizontal")
     for (let i = 0; i < elements.length; i++){
         elements[i].style.flexDirection = "collumn"
+        // elements[i].style.justfiyContent = "start"
     }
     elements = document.getElementsByClassName("vertical")
     for (let i = 0; i < elements.length; i++){
         elements[i].style.width = "100%"
+        
     }   
   }
   
