@@ -6,21 +6,51 @@ const LinuxButton = document.getElementById("LinuxButton")
 
 let Menu = [HomeButton, ProjectButton, ContactButton, LinuxButton]
 
-if(screen.availHeight > screen.availWidth * 2){
-    let  menu = document.getElementById("MenuBar")
 
-    menu.style.width = "100%"
-    var elements = document.getElementsByClassName("horizontal")
-    for (let i = 0; i < elements.length; i++){
-        elements[i].style.flexDirection = "collumn"
-    }
-    var elements = document.getElementsByClassName("vertical")
-    for (let i = 0; i < elements.length; i++){
-        elements[i].style.width = "100%"
-    }
-    
-  }
+setInterval(adjustforScreen, 100)
 
+function adjustforScreen(){
+    if(screen.availHeight > screen.availWidth * 1.5){
+        let menu = document.getElementById("MenuBar")
+        menu.style.width= "100%"
+        let title = document.getElementById("MainTitle")
+        let BarButtons = document.getElementsByClassName("MenuButton")
+        title.style.fontSize = "75px"
+        
+        for (let i=0; i< BarButtons.length; i++){
+            BarButtons[i].style.fontSize = "15px"
+        }
+
+        var elements = document.getElementsByClassName("horizontal")
+        for (let i = 0; i < elements.length; i++){
+            elements[i].style.flexDirection = "collumn"
+        }
+        var elements = document.getElementsByClassName("vertical")
+        for (let i = 0; i < elements.length; i++){
+            elements[i].style.width = "100%"
+        }
+        
+    }else{
+        let menu = document.getElementById("MenuBar")
+        menu.style.width= "60%"
+        let title = document.getElementById("MainTitle")
+        let BarButtons = document.getElementsByClassName("MenuButton")
+        title.style.fontSize = "104px"
+        
+        for (let i=0; i< BarButtons.length; i++){
+            BarButtons[i].style.fontSize = "20px"
+        }
+
+        var elements = document.getElementsByClassName("horizontal")
+        for (let i = 0; i < elements.length; i++){
+            elements[i].style.flexDirection = "row"
+        }
+        var elements = document.getElementsByClassName("vertical")
+        for (let i = 0; i < elements.length; i++){
+            elements[i].style.width = "25%"
+        }
+    }
+}
   
 
 
@@ -125,10 +155,6 @@ function Transition() {
     }else if (TargetPosition == CurrentPosition){
         return
     }
-    const ProjectDiv = document.getElementById("ProjectDiv")
-    const HomeDiv = document.getElementById("HomeDiv")
-    const ContactDiv = document.getElementById("ContactDiv")
-    const LinuxDiv = document.getElementById("LinuxDiv")
 
     const ScrollDiv = document.getElementById("ScrollingPane")
     let id = null;
@@ -163,13 +189,8 @@ function Transition() {
         } else {
             time++
             pos = ((anim_step * easeInOutCubic(time/length)) * 100) + start
-            ProjectPos = pos + 100
-            // ContactPos = pos + 200
-            // LinuxPos = pos + 300
             ScrollDiv.style.left = pos + '%';
-            // ProjectDiv.style.left = ProjectPos + '%'
-            // ContactDiv.style.left = ContactPos + "%"
-            // LinuxDiv.style.left = LinuxPos + "%"
+
         }
       }
       
@@ -200,4 +221,3 @@ function easeInOutExpo(x){
     
     }
 
-console.warn("penis")
