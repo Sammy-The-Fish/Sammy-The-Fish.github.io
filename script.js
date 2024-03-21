@@ -8,6 +8,7 @@ let Menu = [HomeButton, ProjectButton, ContactButton, LinuxButton]
 
 
 if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+    document.write("THIS IS MOBILE< THIS IS MOBILE THIS IS MOBILE")
     var elements = document.getElementsByClassName("horizontal")
     for (let i = 0; i < elements.length; i++){
         elements[i].style.flexDirection = "collumn"
