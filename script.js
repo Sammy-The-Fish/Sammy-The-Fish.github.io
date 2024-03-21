@@ -12,21 +12,22 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
     var elements = document.getElementsByClassName("horizontal")
     for (let i = 0; i < elements.length; i++){
         elements[i].style.flexDirection = "collumn"
+        document.write("this is mobile \n this is mobile \n this is mobile")
     }
     var elements = document.getElementsByClassName("vertical")
     for (let i = 0; i < elements.length; i++){
         elements[i].style.width = "100%"
     }
     
-//   }else{
-//     var elements = document.getElementsByClassName("horizontal")
-//     for (let i = 0; i < elements.length; i++){
-//         elements[i].style.flexDirection = "collumn"
-//     }
-//     elements = document.getElementsByClassName("vertical")
-//     for (let i = 0; i < elements.length; i++){
-//         elements[i].style.width = "100%"
-//     }   
+  }else{
+    var elements = document.getElementsByClassName("horizontal")
+    for (let i = 0; i < elements.length; i++){
+        elements[i].style.flexDirection = "collumn"
+    }
+    elements = document.getElementsByClassName("vertical")
+    for (let i = 0; i < elements.length; i++){
+        elements[i].style.width = "100%"
+    }   
   }
   
 
