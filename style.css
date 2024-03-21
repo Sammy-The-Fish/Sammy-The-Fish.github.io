@@ -86,16 +86,18 @@ img{
 }
 
 .horizontal{
-    /* display: flex; */
-    flex-direction: column;
-    flex-wrap: nowrap;
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
     justify-content: center;    
+    /* justify-content: start; */
 }
 
 .vertical{
     /* width: 100%; */
     display: flex;
     justify-content: start;
+    /* justify-content: center; */
     flex-direction: column;
 }
 

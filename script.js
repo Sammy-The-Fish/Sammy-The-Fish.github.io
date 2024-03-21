@@ -6,8 +6,10 @@ const LinuxButton = document.getElementById("LinuxButton")
 
 let Menu = [HomeButton, ProjectButton, ContactButton, LinuxButton]
 
-
 if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+    let  menu = document.getElementById("MenuBar")
+
+    menu.style.width = "100%"
     var elements = document.getElementsByClassName("horizontal")
     for (let i = 0; i < elements.length; i++){
         elements[i].style.flexDirection = "collumn"
@@ -17,18 +19,8 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
         elements[i].style.width = "100%"
     }
     
-  }else{
-    var elements = document.getElementsByClassName("horizontal")
-    for (let i = 0; i < elements.length; i++){
-        elements[i].style.flexDirection = "collumn"
-        // elements[i].style.justfiyContent = "start"
-    }
-    elements = document.getElementsByClassName("vertical")
-    for (let i = 0; i < elements.length; i++){
-        elements[i].style.width = "100%"
-        
-    }   
   }
+
   
 
 
@@ -68,11 +60,11 @@ for (let i = 0; i < LastDiv.children.length; i++){
 }
 
 
+
+
+
+
 var Enterid = setInterval(FloatInFrame, 7)
-
-
-
-
 var time = 0
 function FloatInFrame(){
     if (time == 200){
