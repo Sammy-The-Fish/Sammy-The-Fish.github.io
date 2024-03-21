@@ -6,7 +6,7 @@ const LinuxButton = document.getElementById("LinuxButton")
 
 let Menu = [HomeButton, ProjectButton, ContactButton, LinuxButton]
 
-if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+if(screen.availHeight > screen.availWidth * 2){
     let  menu = document.getElementById("MenuBar")
 
     menu.style.width = "100%"
