@@ -8,7 +8,7 @@ let Menu = [HomeButton, ProjectButton, ContactButton, LinuxButton]
 
 
 if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-    document.write("THIS IS MOBILE< THIS IS MOBILE THIS IS MOBILE")
+    // document.write("THIS IS MOBILE< THIS IS MOBILE THIS IS MOBILE")
     var elements = document.getElementsByClassName("horizontal")
     for (let i = 0; i < elements.length; i++){
         elements[i].style.flexDirection = "collumn"
@@ -56,8 +56,6 @@ let RightDiv = PageDiv.children[1]
 let FirstDiv = LeftDiv.children.length > RightDiv.children.length ? LeftDiv : RightDiv
 let LastDiv = LeftDiv.children.length > RightDiv.children.length ? RightDiv : LeftDiv
 
-console.log(FirstDiv.children)
-console.log(LastDiv.children)
 
 let DivArray = []
 
@@ -68,7 +66,6 @@ for (let i = 0; i < LastDiv.children.length; i++){
     DivArray.push(FirstDiv.children[i])
 }
 
-console.log(DivArray)
 
 var Enterid = setInterval(FloatInFrame, 7)
 
@@ -140,7 +137,7 @@ function Transition() {
     const ContactDiv = document.getElementById("ContactDiv")
     const LinuxDiv = document.getElementById("LinuxDiv")
 
-
+    const ScrollDiv = document.getElementById("ScrollingPane")
     let id = null;
     let pos = 0;
     
@@ -174,12 +171,12 @@ function Transition() {
             time++
             pos = ((anim_step * easeInOutCubic(time/length)) * 100) + start
             ProjectPos = pos + 100
-            ContactPos = pos + 200
-            LinuxPos = pos + 300
-            HomeDiv.style.left = pos + '%';
-            ProjectDiv.style.left = ProjectPos + '%'
-            ContactDiv.style.left = ContactPos + "%"
-            LinuxDiv.style.left = LinuxPos + "%"
+            // ContactPos = pos + 200
+            // LinuxPos = pos + 300
+            ScrollDiv.style.left = pos + '%';
+            // ProjectDiv.style.left = ProjectPos + '%'
+            // ContactDiv.style.left = ContactPos + "%"
+            // LinuxDiv.style.left = LinuxPos + "%"
         }
       }
       
