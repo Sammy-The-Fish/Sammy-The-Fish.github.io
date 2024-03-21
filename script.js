@@ -7,6 +7,30 @@ const LinuxButton = document.getElementById("LinuxButton")
 let Menu = [HomeButton, ProjectButton, ContactButton, LinuxButton]
 
 
+if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+    var elements = document.getElementsByClassName("horizontal")
+    for (let i = 0; i < elements.length; i++){
+        elements[i].style.flexDirection = "collumn"
+    }
+    var elements = document.getElementsByClassName("vertical")
+    for (let i = 0; i < elements.length; i++){
+        elements[i].style.width = "100%"
+    }
+    
+//   }else{
+//     var elements = document.getElementsByClassName("horizontal")
+//     for (let i = 0; i < elements.length; i++){
+//         elements[i].style.flexDirection = "collumn"
+//     }
+//     elements = document.getElementsByClassName("vertical")
+//     for (let i = 0; i < elements.length; i++){
+//         elements[i].style.width = "100%"
+//     }   
+  }
+  
+
+
+
 var animating = 0;
 var CurrentPosition = 0;
 var TargetPosition
@@ -45,7 +69,7 @@ for (let i = 0; i < LastDiv.children.length; i++){
 
 console.log(DivArray)
 
-var Enterid = setInterval(FloatInFrame, 0.1)
+var Enterid = setInterval(FloatInFrame, 7)
 
 
 
@@ -131,9 +155,9 @@ function Transition() {
     var time = 0
     
     
-    id = setInterval(frame, 1);
+    id = setInterval(frame, 5);
     function frame() {
-        let length = 60
+        let length = 100
         if (time == length) {
             animating = false;
             clearInterval(id);
@@ -172,3 +196,15 @@ function easeInOutCubic(x) {
 function easeOutQuint(x){
     return 1 - Math.pow(1 - x, 5);
 }
+
+
+
+function easeInOutExpo(x){
+    return x === 0
+      ? 0
+      : x === 1
+      ? 1
+      : x < 0.5 ? Math.pow(2, 20 * x - 10) / 2
+      : (2 - Math.pow(2, -20 * x + 10)) / 2;
+    
+    }

@@ -81,19 +81,20 @@ img{
 
 .horizontal{
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    
+    /* flex-direction: column; */
+    flex-wrap: nowrap;
+    justify-content: center;    
 }
 
 .vertical{
+    /* width: 100%; */
     display: flex;
     justify-content: start;
     flex-direction: column;
 }
 
 .MenuBar{
-    width: 54%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 30px;
