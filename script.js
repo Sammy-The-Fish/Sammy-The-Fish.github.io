@@ -114,10 +114,6 @@ function FloatInFrame(){
 
 
 function Transition(TargetPosition) {
-    
-
-
-
     if (animating){
         return
     }else if (TargetPosition == CurrentPosition){
@@ -162,7 +158,7 @@ function Transition(TargetPosition) {
             time++
             
             for (let i=0; i< content.length; i++){
-                content[i].style.left = (time/length)<=0.5 ? (time * randomTimes[i]) + "px" : ((length - time) * randomTimes[i]) + "px" 
+                content[i].style.left = ((time/length)<=0.5 ? (time * randomTimes[i]) : ((length - time) * randomTimes[i])) * anim_step + "px"
             }
             pos = ((anim_step * easeInOutCubic(time/length)) * 100) + start
             ScrollDiv.style.left = pos + '%';
