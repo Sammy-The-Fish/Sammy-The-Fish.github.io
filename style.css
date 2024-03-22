@@ -8,7 +8,7 @@
 body {
     background-color: #1E1D2F;
     font-family: JetbrainsMono;
-    overflow-y: hidden;
+    height: 200%;
     overflow-x: hidden;
     max-height: 100%;
     position: relative
@@ -53,6 +53,7 @@ img{
     padding: 5px;
     font-family: JetbrainsMono;
     font-size: 20px;
+    transition: all 0.25s;
 }
 .MenuButton:hover{
     background-color: #575268;
@@ -70,7 +71,13 @@ img{
     border-radius: 20px;
     margin: 25px;
     padding: 10px;
+    /* transition: all 0.5s; */
 }
+
+/* .content:hover{
+    font-size: 17px;
+    padding: 2px;
+} */
 
 
 .front{

@@ -60,9 +60,9 @@ var CurrentPosition = 0;
 
 for(let i=0; i < Menu.length; i++){
     if(i == CurrentPosition){
-        Menu[i].style.textDecorationLine = "underline"
+        Menu[i].style.textDecoration = "underline"
     }else{
-        Menu[i].style.textDecorationLine = "none"
+        Menu[i].style.textDecoration = "none"
     }
 }
 
@@ -138,7 +138,7 @@ function Transition(TargetPosition) {
 
     var randomTimes = []
     for (let i=0; i< content.length; i++){
-        randomTimes.push(((Math.random()-0.5) * 4))
+        randomTimes.push(((Math.random()) * 3))
     }
     id = setInterval(frame, 5);
     function frame() {
@@ -149,9 +149,9 @@ function Transition(TargetPosition) {
             CurrentPosition = TargetPosition
             for(let i=0; i < Menu.length; i++){
                     if(i == CurrentPosition){
-                        Menu[i].style.textDecorationLine = "underline"
+                        Menu[i].style.textDecoration = "underline"
                     }else{
-                        Menu[i].style.textDecorationLine = "none"
+                        Menu[i].style.textDecoration = "none"
                     }
             }
         } else {
@@ -168,19 +168,13 @@ function Transition(TargetPosition) {
       
 }
 
-
-
-
 function easeInOutCubic(x) {
     return x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
     }
 
-
-
 function easeOutQuint(x){
     return 1 - Math.pow(1 - x, 5);
 }
-
 
 
 function easeInOutExpo(x){
