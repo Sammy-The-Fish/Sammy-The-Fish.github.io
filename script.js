@@ -114,6 +114,9 @@ function FloatInFrame(){
 
 
 function Transition(TargetPosition) {
+    
+
+
 
     if (animating){
         return
@@ -139,6 +142,7 @@ function Transition(TargetPosition) {
     
     id = setInterval(frame, 5);
     function frame() {
+        content = document.getElementsByClassName("content")
         let length = 100
         if (time == length) {
             animating = false;
@@ -153,6 +157,9 @@ function Transition(TargetPosition) {
             }
         } else {
             time++
+            // for (let i=0; i< content.length; i++){
+                // content[i].style.left = Math.random() * 100 + "%";
+            // }
             pos = ((anim_step * easeInOutCubic(time/length)) * 100) + start
             ScrollDiv.style.left = pos + '%';
 
