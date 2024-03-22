@@ -138,11 +138,14 @@ function Transition(TargetPosition) {
     anim_step *= Math.abs(TargetPosition - CurrentPosition) 
     start = (0 - CurrentPosition) * 100
     var time = 0
-    
-    
+    const content = document.getElementsByClassName("content")
+
+    var randomTimes = []
+    for (let i=0; i< content.length; i++){
+        randomTimes.push(((Math.random()-0.5) * 4))
+    }
     id = setInterval(frame, 5);
     function frame() {
-        content = document.getElementsByClassName("content")
         let length = 100
         if (time == length) {
             animating = false;
@@ -157,9 +160,10 @@ function Transition(TargetPosition) {
             }
         } else {
             time++
-            // for (let i=0; i< content.length; i++){
-                // content[i].style.left = Math.random() * 100 + "%";
-            // }
+            
+            for (let i=0; i< content.length; i++){
+                content[i].style.left = (time/length)<=0.5 ? (time * randomTimes[i]) + "px" : ((length - time) * randomTimes[i]) + "px" 
+            }
             pos = ((anim_step * easeInOutCubic(time/length)) * 100) + start
             ScrollDiv.style.left = pos + '%';
 
