@@ -32,7 +32,7 @@ function adjustforScreen(){
         
     }else{
         let menu = document.getElementById("MenuBar")
-        menu.style.width= "60%"
+        menu.style.width= "75%"
         let title = document.getElementById("MainTitle")
         let BarButtons = document.getElementsByClassName("MenuButton")
         title.style.fontSize = "104px"
@@ -47,7 +47,7 @@ function adjustforScreen(){
         }
         var elements = document.getElementsByClassName("vertical")
         for (let i = 0; i < elements.length; i++){
-            elements[i].style.width = "25%"
+            elements[i].style.width = "40%"
         }
     }
 }
