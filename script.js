@@ -57,7 +57,6 @@ function adjustforScreen(){
 
 var animating = 0;
 var CurrentPosition = 0;
-var TargetPosition
 
 for(let i=0; i < Menu.length; i++){
     if(i == CurrentPosition){
@@ -112,43 +111,9 @@ function FloatInFrame(){
 }
 
 
-function TransHome(){
-    if (animating){
-        return
-    }
-    TargetPosition = 0
-    Transition()
-}
 
 
-
-function TransProject(){
-    if (animating){
-        return
-    }
-    TargetPosition = 1
-    Transition()
-}
-
-
-function TransContact(){
-    if (animating){
-        return
-    }
-    TargetPosition = 2
-    Transition()
-}
-
-function TransLinux(){
-    if (animating){
-        return
-    }
-    TargetPosition = 3
-    Transition()
-}
-
-
-function Transition() {
+function Transition(TargetPosition) {
 
     if (animating){
         return
