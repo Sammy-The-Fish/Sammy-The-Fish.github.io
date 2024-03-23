@@ -93,7 +93,7 @@ for (let i = 0; i < LastDiv.children.length; i++){
 
 
 
-var Enterid = setInterval(FloatInFrame, 13)
+var Enterid = setInterval(FloatInFrame, 7)
 var time = 0
 function FloatInFrame(){
     if (time == 200){
@@ -141,7 +141,7 @@ function Transition(TargetPosition) {
     for (let i=0; i< content.length; i++){
         randomTimes.push((-(Math.random()) * 4)+1)
     }
-    id = setInterval(frame, 15);
+    id = setInterval(frame, 10);
     function frame() {
         let length = 100
         if (time == length) {
