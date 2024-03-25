@@ -1,7 +1,7 @@
 @font-face {
     font-family: JetBrainsMono;
     src: url(JetBrainsMono.ttf);
- }
+}
 
 
 
@@ -43,6 +43,14 @@ img{
     width: 50%;
     border-radius: 20px;
     border: solid #575268 5px;
+}
+
+
+button{
+    border-radius: 12px;
+    font-size: 24px;
+    border: none;
+    color: #F28FAD;
 }
 
 .MenuButton{
@@ -162,8 +170,6 @@ img{
 }
 
 
-  
-
 
 
 #HomeDiv{
@@ -189,4 +195,30 @@ img{
     grid-column: 4;
     grid-row: 1; 
 
+}
+
+
+#LeverSimButton{
+    color: black;
+}
+
+#leverbox{
+    height: 100%;
+    width: 50%;
+    margin-right: 0px;
+}
+#LeverText{
+    font-size: 400px;
+}
+
+#LeverGame{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#Lever{
+    margin-top: auto;
+    margin-bottom: auto;
+    background-color: #00000000;
+    border: 0px;
 }
