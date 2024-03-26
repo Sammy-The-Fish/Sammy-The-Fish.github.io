@@ -13,9 +13,9 @@
     <div class="content">
         <p>pull the lever, it will produce a number 1, 2, or 3</p>
         <h4>RULES:</h4>
-        <ul>
+        <ol>
             <li>the larger number wins</li>
-        </ul>
+        </ol>
     </div>
     <div id="LeverGame">
         <div class="content" id="leverbox">
@@ -23,9 +23,11 @@
                 <center>1</center>
             </h1>
         </div>
-        <button id="Lever">
-            <image src ="Images/LeverBase.png">
-        </button>
+            <image src ="Images/LeverBase.png" width="50px" id="LeverBase" onclick="CrankLever()">
+            <!-- <button id = "LeverButton"> -->
+            <img src="Images/Lever.png" height="100px" id="Lever" onclick="CrankLever()">
+            <!-- </button> -->
     </div>
+    <script src="Lever.js"></script>
 </body>
 </html>

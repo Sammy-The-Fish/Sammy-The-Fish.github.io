@@ -37,14 +37,6 @@ button:hover{
     cursor: pointer;
 }
 
-img{
-    margin-left: 25%;
-    margin-right: 25%;
-    width: 50%;
-    border-radius: 20px;
-    border: solid #575268 5px;
-}
-
 
 button{
     border-radius: 12px;
@@ -52,6 +44,16 @@ button{
     border: none;
     color: #F28FAD;
 }
+
+
+.image{
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 50%;
+    border-radius: 20px;
+    border: solid #575268 5px;
+}
+
 
 .MenuButton{
     background-color: #302D41;
@@ -216,9 +218,26 @@ button{
     flex-direction: row;
     justify-content: center;
 }
+#LeverBase{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: -10px;
+    background-color: #00000000;
+    border: 0px;
+}
+
+
+#LeverButton{
+    background-color: #00000000;
+    z-index: 1;
+}
+
 #Lever{
+    cursor: pointer;
     margin-top: auto;
     margin-bottom: auto;
     background-color: #00000000;
-    border: 0px;
+    margin-right: 0px;
+    margin-left: -25px;
+    z-index: -1;
 }
