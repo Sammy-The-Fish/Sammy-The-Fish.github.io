@@ -9,22 +9,36 @@
 </head>
 <body>
     <h1><center>LEVER SIMULATOR</center></h1>
+    <h2><center>COMPETITIVE EDITION</center></h2>
     <div class="content">
         <p>pull the lever, it will produce a number 1, 2, or 3</p>
         <h4>RULES:</h4>
         <ol>
-            <li>the larger number wins</li>
+            <li>If your first result is one, crank again and add results</li>
+            <li>If your result is 2, crank again double result and add it</li>
+            <li>if it is 3, the lever is not pulled again</li>
         </ol>
     </div>
+    <div class="content" id="LeverNotif">
+        <h3 id="LeverNotifText">
+            <center>Crank That Lever</center>
+        </h3>
+    </div>
     <div id="LeverGame">
-        <div class="content" id="leverbox">
+        <div class="content" id="TotalBlock">
+            <h4 id="TheWordTotalText">TOTAL:</h4>
+            <h1 id="TotalText">
+                <center>00</center>
+            </h1>
+        </div>
+        <div class="content" id="leverbox"> 
             <h1 id="LeverText">
                 <center>X</center>
             </h1>
         </div>
             <image src ="Images/LeverBase.png" width="50px" id="LeverBase" onclick=""></image>
             <!-- <button id = "LeverButton"> -->
-            <img src="Images/Lever.png" height="50px" id="Lever" onclick="CrankLever(0)">
+            <img src="Images/Lever.png" height="50px" id="Lever" onclick="CrankLever(1)">
             <!-- </button> -->
     </div>
     <script src="Lever.js"></script>

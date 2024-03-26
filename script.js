@@ -60,7 +60,7 @@ setInterval(pulseLeverbutton, 10)
 
 color = 0
 function pulseLeverbutton(){
-    StartLeverSim.style.backgroundColor = "hsl(" + color + ", 100%, 50%)"
+    StartLeverSim.style.backgroundColor = "hsl(" + color + ", 100%, 75%)"
     console.log(color)
     color++
 }
