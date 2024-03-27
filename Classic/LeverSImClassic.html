@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./ClassicStyle.css">
+    <title>Lever simulator</title>
+</head>
+<body>
+    <h1><center>LEVER SIMULATOR</center></h1>
+    <div class="content">
+        <p><center>pull the lever, it will produce a number 1, 2, or 3</center></p>
+        <center>
+        <h4>RULES:</h4>
+            the larger number wins
+        </center>  
+    </div>
+    <div id="LeverGame">
+        <center>
+        <button id = "LeverButton" onclick="CrankLever(0)">
+            Lever
+        <!-- <img src="Images/Lever.png" height="50px" id="Lever" onclick="CrankLever(0)"> -->
+        </button>
+        </center>
+        <div class="content" id="leverbox">
+            <h1 id="LeverText">
+                <center>X</center>
+            </h1>
+        </div>
+
+    </div>
+    <script src="ClassicScript.js"></script>
+</body>
+</html>

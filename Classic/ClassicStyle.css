@@ -1,0 +1,17 @@
+
+h1{
+    font-size: 104px;
+    text-decoration: underline;
+}
+
+
+#LeverButton{
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 30px;
+}
+
+#LeverText{
+    text-decoration: none;
+}
