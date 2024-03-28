@@ -70,7 +70,7 @@ function CrankAgain(num){
     
 
     switch (num){
-        case 1:
+        case 3:
             console.log("this is broken")
             total = num
             round = 2; 
@@ -81,7 +81,7 @@ function CrankAgain(num){
             double = true
             round++
             break
-        case 3:
+        case 1:
             LeverNotifText.innerHTML = "<center>Next Crank adds to your score!</center>"
             total = num
             double = false
@@ -96,6 +96,6 @@ function CrankAgain(num){
 
 
 function decrankify(){
-    Lever.style.cursor = "none"
+    Lever.style.cursor = "default"
     stopped = true
 }

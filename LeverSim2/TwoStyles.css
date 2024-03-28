@@ -1,0 +1,51 @@
+body{
+    background-color: black;
+    background-image: url(backNumber.svg);
+    background-size: 30px;
+    max-width: 100%;
+    max-height: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+
+.background{
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(#00000000, #000);
+    z-index: 5;
+}
+
+#MainTitle{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    z-index: 4;
+    font-family: Jetbrains Mono;
+    font-size: 64px;
+    color: white;
+}
+
+#MainTitleCont{
+    z-index: 4;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.center{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    z-index: 3;
+}
+
