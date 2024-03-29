@@ -1,22 +1,46 @@
 body{
+    font-family: Jetbrains Mono;
     background-color: black;
-    background-image: url(backNumber.svg);
-    background-size: 30px;
     max-width: 100%;
-    max-height: 100%;
-    overflow-y: hidden;
+    min-height: 800px;
+     /* max-height: 100%;  */
+     /* overflow-y: hidden;  */
     overflow-x: hidden;
 }
 
-
-.background{
-    position: absolute;
+#numbers{
+    background-size: 30px;
+    background-image: url(backNumber.svg);
+    position: fixed;
     left: 0%;
     top: 0%;
     width: 100%;
     height: 100%;
-    background-image: radial-gradient(#00000000 , #000000FF);
-    z-index: 5;
+}
+
+
+
+#background{
+    pointer-events: none;
+    position: fixed;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(#00000000 , #000000FF 100%);
+    z-index: 4;
+}
+
+
+#FadeIn{
+    pointer-events: none;
+    position: fixed;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(#00000000 , #000000FF 0%);
+    z-index: 8;
 }
 
 #MainTitle{
@@ -28,21 +52,49 @@ body{
     font-family: Jetbrains Mono;
     font-size: 64px;
     color: white;
+    border-bottom: 0px;
 }
 
 #MainTitleCont{
-    z-index: 5;
+
+    z-index: 3;
     top: 0px;
     left: 0px;
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
 }
 
+#TagLine{
+    font-size: 20px;
+    margin-top: 0px;
+}
 
+
+
+.contentBlock{
+    position: inline-flex;
+    width: 100%;
+    align-items: center;
+    z-index: inherit;
+
+}
+
+
+.content{
+    margin: auto;
+    padding: 10px;
+    width: 75%;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0,0,0, 0);
+    border: #FF0000 2px solid;
+    z-index: inherit;
+    color: white;
+    border-radius: 20px;
+}
 
 .center{
-    position: absolute;
+    position: fixed;
     left: 50%;
     top: 50%;
     transform: translateY(-50%) translateX(-50%);
@@ -52,4 +104,10 @@ body{
 .FakeLink{
     cursor: pointer;
     text-decoration: underline;
+}
+
+#RestOfWebsite{
+    position: relative;
+    margin-top: 65%;
+    z-index: 5;
 }
