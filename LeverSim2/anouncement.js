@@ -29,35 +29,6 @@ function fadeIn(){
 
 
 
-
-
-
-
-
-// function transition(){
-//     if(entering){
-//         return
-//     }
-//     time = 0
-//     id = setInterval(Frame, 20, 50)
-//     console.log("testing")
-//     function Frame(length){
-//         if (time == length){
-//             clearInterval(id)
-//         }else{
-//             console.log(time)
-//             time ++
-//             pos = time/length
-//             easepos = easeInOutExpo(pos)
-//             Title.style.top = (50-(easepos * 100)) + "%"
-//             Panel.style.marginTop = (100 - (easepos * 75))  + "%"
-//         }
-//     }
-// }
-
-
-
-
 function easeInOutExpo(x){
     return x === 0
       ? 0

@@ -1,0 +1,62 @@
+:root{
+    --accent: red
+}
+
+body{
+    font-family: Jetbrains Mono;
+    background-color: black;
+    max-width: 100%;
+    min-height: 800px;
+     /* max-height: 100%;  */
+     /* overflow-y: hidden;  */
+    overflow-x: hidden;
+}
+
+.background{
+    position: fixed;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
+
+.content{
+    padding: 15px;
+    backdrop-filter: blur(10px);
+    border: var(--accent) 2px solid;
+    border-radius: 20px;
+    color: white;
+}
+
+#Rules{
+    width: 60%;
+    margin: auto;
+}
+
+#vingette{
+    /* pointer-events: none; */
+    position: fixed;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(#00000000 , #000000FF 100%);
+    z-index: -1;
+}
+
+
+#numbers{
+    margin: 0px;
+    font-size: 40px;
+    color: rgba(255, 255, 255, 0.527);
+    z-index: inherit;
+}
+
+#MainTitle{
+    color: white;
+    text-align: center;
+    z-index: 5;
+    font-size: 104px;
+}

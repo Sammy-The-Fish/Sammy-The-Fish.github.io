@@ -2,7 +2,7 @@ body{
     font-family: Jetbrains Mono;
     background-color: black;
     max-width: 100%;
-    min-height: 800px;
+    min-height: 2000px;
      /* max-height: 100%;  */
      /* overflow-y: hidden;  */
     overflow-x: hidden;
@@ -70,7 +70,14 @@ body{
     margin-top: 0px;
 }
 
-
+#trailer{
+    border: #FF0000 2px solid;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    margin-bottom: 400px;
+}
 
 .contentBlock{
     position: inline-flex;
@@ -86,7 +93,7 @@ body{
     padding: 10px;
     width: 75%;
     backdrop-filter: blur(10px);
-    background-color: rgba(0,0,0, 0);
+    background-color: rgba(0,0,0, 0.25);
     border: #FF0000 2px solid;
     z-index: inherit;
     color: white;
