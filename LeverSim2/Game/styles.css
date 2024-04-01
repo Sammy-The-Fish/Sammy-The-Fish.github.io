@@ -6,7 +6,8 @@ body{
     font-family: Jetbrains Mono;
     background-color: black;
     max-width: 100%;
-    min-height: 800px;
+    min-height: 2000px;
+    height: 1000px;
      /* max-height: 100%;  */
      /* overflow-y: hidden;  */
     overflow-x: hidden;
