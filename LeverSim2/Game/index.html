@@ -14,7 +14,7 @@
         <pre id="numbers">
         </pre>
     </div>
-    <h1 id="MainTitle">LEVER SIMULATOR <span style="color: red">2</span></h1>
+    <h1 id="MainTitle">LEVER SIMULATOR <span id="TitleNum" style="color: red">2</span></h1>
     <div class="content" id="Rules">
         <p>pull the lever, it will produce a number 1, 2, or 3</p>
         <h4>RULES:</h4>
@@ -27,12 +27,9 @@
             <h1 id="LeverText">
                 <center>X</center>
             </h1>
-        </div>
-            <!-- <image src ="Images/LeverBase.png" width="50px" id="LeverBase" onclick=""></image> -->
-            <!-- <button id = "LeverButton"> -->
+        </div id="LeverContainer">
             <img src="Images/Lever.png" height="50px" id="Lever" onclick="CrankLever(0)">
-            <!-- </button> -->
-    </div>
+        </div>
     <script src="LeverSim2.js"></script>
 </body>
 </html>

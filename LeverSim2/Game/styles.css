@@ -78,6 +78,7 @@ body{
 }
 
 #Lever{
+    /* background-color: red; */
     cursor: pointer;
     margin-top: auto;
     margin-bottom: auto;
@@ -86,6 +87,10 @@ body{
     margin-left: -190px;
     transform: rotate(-45deg);
     z-index: 1;
+}
+
+#LeverContainer{
+    background-color: red;
 }
 #LeverText{
     font-size: 400px;

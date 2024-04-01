@@ -18,24 +18,23 @@ function loadBackground(){
 oldvalue = " 2"
 function changeBackground(newValue, color){
     id2 = setInterval(BackgroundFrame, 25, 100, newValue, color)
-    console.log(id2)
-    time = 0
+    console.log("running")
+    backgroundTime = 0
     function BackgroundFrame(length, newValue, color){
-        if(time == length){
+        if(backgroundTime == length){
             oldvalue = " " + num
             Pulling = false
-            console.log(id2)
+            console.log(Pulling)
             clearInterval(id2)
-            console.log(id2)
             return
         }
-        time++
+        backgroundTime++
         let string = ""
         for (let i = 0; i<50; i++){
             for(let j=0; j<60; j++){
-                if(j == (time - i)){
+                if(j == (backgroundTime - i)){
                     string += "<span style = 'font-weight: bolder; color: " + color + "'>" + newValue + "</span>"
-                }else if(j <= (time - i)){
+                }else if(j <= (backgroundTime - i)){
                     string += newValue
                 }else{
                     string += oldvalue
@@ -52,13 +51,12 @@ function changeBackground(newValue, color){
 const Lever = document.getElementById("Lever")
 const LeverText = document.getElementById("LeverText")
 const accent = document.querySelector(':root');
-
+const TitleNum = document.getElementById("TitleNum")
 
 
 Pulling = false
 stopped = false
 function CrankLever(profesional){
-
     // console.log(oldvalue)
     if (Pulling || stopped){
         return
@@ -71,28 +69,6 @@ function CrankLever(profesional){
     function Frame(){
         if(time == 320){
             // prob = Math.random()
-            changeBackground(" 3", "yellow")
-            if(prob == 1){
-                Lever.style.filter = "hue-rotate(240deg)"
-                accent.style.setProperty('--accent', 'blue');
-                changeBackground(" 1", "blue")
-                num = 1;
-            }else if (prob == 2){
-                Lever.style.filter = "hue-rotate(120deg)"
-                accent.style.setProperty('--accent', 'green');
-                changeBackground(" 2", "green")
-                num = 2
-            }else if (prob == 3){
-                Lever.style.filter = "hue-rotate(60deg)"
-                accent.style.setProperty('--accent', 'yellow');
-                changeBackground(" 3", "yellow")
-                num = 3
-            }else if (prob == 4){
-                Lever.style.filter = "hue-rotate(0deg)"
-                accent.style.setProperty('--accent', 'red');
-                changeBackground(" 4", "red")
-                num = 4
-            }
             LeverText.innerHTML = "<center>" + num + "</center>"
             clearInterval(id)
             return
@@ -105,27 +81,60 @@ function CrankLever(profesional){
                 Lever.style.transform = "rotate(" + (time-45) + "deg)"
                 break
             case 3:
+                if (time == (stageLength * 3 ) + 1){
+                    console.log("testing")
+                    if(prob == 1){
+                        Lever.style.filter = "hue-rotate(240deg)"
+                        accent.style.setProperty('--accent', 'blue');
+                        changeBackground(" 1", "blue")
+                        num = 1;
+                        TitleNum.style.color = "blue"
+                    }else if (prob == 2){
+                        Lever.style.filter = "hue-rotate(120deg)"
+                        accent.style.setProperty('--accent', '#00FF00');
+                        changeBackground(" 2", "#00FF00")
+                        TitleNum.style.color = "#00FF00"
+                        num = 2
+                    }else if (prob == 3){
+                        Lever.style.filter = "hue-rotate(60deg)"
+                        accent.style.setProperty('--accent', 'yellow');
+                        changeBackground(" 3", "yellow")
+                        TitleNum.style.color = "yellow"
+                        num = 3
+                    }else if (prob == 4){
+                        Lever.style.filter = "hue-rotate(0deg)"
+                        accent.style.setProperty('--accent', 'red');
+                        changeBackground(" 4", "red")
+                        TitleNum.style.color = "red"
+                        num = 4
+                    }
+                }
                 let rot = time - 3 * stageLength
                 Lever.style.transform = "rotate(" + ((80-rot)-45) + "deg)"
                 break
             default:
                 if (time % 15 == 0){
-                    prob = Math.ceil(Math.random() * 3)
+                    prob = Math.ceil(Math.random() * 4)
+                    console.log(prob)
                     if(prob == 1){
                         Lever.style.filter = "hue-rotate(240deg)"
                         accent.style.setProperty('--accent', 'blue');
+                        TitleNum.style.color = "blue"
                         num = 1;
                     }else if (prob == 2){
                         Lever.style.filter = "hue-rotate(120deg)"
-                        accent.style.setProperty('--accent', 'green');
+                        accent.style.setProperty('--accent', '#00FF00');
+                        TitleNum.style.color = "#00FF00"
                         num = 2
                     }else if (prob == 3){
                         Lever.style.filter = "hue-rotate(60deg)"
                         accent.style.setProperty('--accent', 'yellow');
+                        TitleNum.style.color = "yellow"
                         num = 3
                     }else if (prob == 4){
                         Lever.style.filter = "hue-rotate(0deg)"
                         accent.style.setProperty('--accent', 'red');
+                        TitleNum.style.color = "red"
                         num = 4
                     }
                     LeverText.innerHTML = "<center>" + num + "</center>"
