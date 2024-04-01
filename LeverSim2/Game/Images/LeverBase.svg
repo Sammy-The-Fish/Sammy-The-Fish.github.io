@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="57.84082mm"
+   height="227.33955mm"
+   viewBox="0 0 57.84082 227.33955"
+   version="1.1"
+   id="svg1"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm" />
+  <defs
+     id="defs1">
+    <inkscape:path-effect
+       effect="fillet_chamfer"
+       id="path-effect4"
+       is_visible="true"
+       lpeversion="1"
+       nodesatellites_param="F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1"
+       radius="0"
+       unit="px"
+       method="auto"
+       mode="F"
+       chamfer_steps="1"
+       flexible="false"
+       use_knot_distance="true"
+       apply_no_radius="true"
+       apply_with_radius="true"
+       only_selected="false"
+       hide_knots="false" />
+  </defs>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="WallPart"
+     transform="translate(0.09971798,-32.18967)">
+    <path
+       style="fill:#302d41;fill-opacity:1;stroke-width:0.264583"
+       id="rect1"
+       width="47.27858"
+       height="227.33954"
+       x="22.633362"
+       y="32.189671"
+       ry="15.843353"
+       sodipodi:type="rect"
+       inkscape:path-effect="#path-effect4"
+       d="m 38.476715,32.189671 h 15.591873 c 8.777218,0 15.843354,7.066135 15.843354,15.843353 V 243.68586 c 0,8.77721 -7.066136,15.84335 -15.843354,15.84335 H 38.476715 c -8.777218,0 -15.843353,-7.06614 -15.843353,-15.84335 V 48.033024 c 0,-8.777218 7.066135,-15.843353 15.843353,-15.843353 z"
+       transform="translate(-12.170835)" />
+    <rect
+       style="fill:#302d41;fill-opacity:1;stroke-width:0.234951"
+       id="rect5"
+       width="43.254868"
+       height="227.21379"
+       x="-0.099717975"
+       y="32.315407"
+       inkscape:export-filename="rect5.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+  </g>
+</svg>

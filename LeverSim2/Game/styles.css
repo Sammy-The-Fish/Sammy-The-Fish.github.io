@@ -28,11 +28,13 @@ body{
     border: var(--accent) 2px solid;
     border-radius: 20px;
     color: white;
+    background-image: radial-gradient(#00000000 , #000000FF 75%);
 }
 
 #Rules{
     width: 60%;
     margin: auto;
+    margin-bottom: 250px;
 }
 
 #vingette{
@@ -59,4 +61,41 @@ body{
     text-align: center;
     z-index: 5;
     font-size: 104px;
+}
+#LeverGame{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#LeverBase{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: -10px;
+    background-color: #00000000;
+    border: 0px;
+    z-index: 2;
+}
+
+#Lever{
+    cursor: pointer;
+    margin-top: auto;
+    margin-bottom: auto;
+    background-color: #00000000;
+    margin-right: 0px;
+    margin-left: -190px;
+    transform: rotate(-45deg);
+    z-index: 1;
+}
+#LeverText{
+    font-size: 400px;
+    color: #FFF;
+}
+#leverbox{
+    backdrop-filter: blur(5px);
+    background-image: radial-gradient(circle, #00000000 , #000000FF 75%);
+    height: 100%;
+    width: 50%;
+    margin-right: 0px;
+    z-index: 2;
 }

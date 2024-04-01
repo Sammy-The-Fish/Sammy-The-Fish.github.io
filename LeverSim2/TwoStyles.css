@@ -98,6 +98,8 @@ body{
     z-index: inherit;
     color: white;
     border-radius: 20px;
+    background-image: radial-gradient(#00000000 , #000000FF 75%);
+
 }
 
 .center{
