@@ -20,6 +20,8 @@ function changeBackground(newValue, color){
     id2 = setInterval(BackgroundFrame, 25, 100, newValue, color)
     console.log("running")
     backgroundTime = 0
+    option = Math.ceil(Math.random() * 4)
+    // option = 5
     function BackgroundFrame(length, newValue, color){
         if(backgroundTime == length){
             oldvalue = " " + num
@@ -30,15 +32,43 @@ function changeBackground(newValue, color){
         }
         backgroundTime++
         let string = ""
+        
         for (let i = 0; i<50; i++){
             for(let j=0; j<60; j++){
-                if(j == (backgroundTime - i)){
-                    string += "<span style = 'font-weight: bolder; color: " + color + "'>" + newValue + "</span>"
-                }else if(j <= (backgroundTime - i)){
-                    string += newValue
-                }else{
-                    string += oldvalue
-                }
+                switch (option){
+                    case 1:
+                        if(j+25 == (backgroundTime + i)){
+                            string += "<span style = 'font-weight: bolder; color: " + color + "';>" + newValue + "</span>"
+                        }else if(j + 25< (backgroundTime + i)){
+                            string += newValue
+                        }else{
+                            string += oldvalue
+                        }break
+                    case 2:
+                        if(j == (backgroundTime - i)){
+                            string += "<span style = 'font-weight: bolder; color: " + color + "';>" + newValue + "</span>"
+                        }else if(j < (backgroundTime - i)){
+                            string += newValue
+                        }else{
+                            string += oldvalue
+                        }break
+                    case 3:
+                        if(j == (80 - (backgroundTime + i))){
+                            string += "<span style = 'font-weight: bolder; color: " + color + "';>" + newValue + "</span>"
+                        }else if(j > (80 - (backgroundTime + i))){
+                            string += newValue
+                        }else{
+                            string += oldvalue
+                        }break
+                    case 4:
+                        if(j == (60 - (backgroundTime - i))){
+                            string += "<span style = 'font-weight: bolder; color: " + color + "';>" + newValue + "</span>"
+                        }else if(j > (60 - (backgroundTime - i))){
+                            string += newValue
+                        }else{
+                            string += oldvalue
+                        }break
+            }
             }
             string += "<br>"
         }

@@ -85,7 +85,7 @@ body{
 }
 
 #Lever{
-    /* background-color: red; */
+    background-color: red;
     cursor: pointer;
     margin-top: auto;
     margin-bottom: auto;
