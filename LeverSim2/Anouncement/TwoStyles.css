@@ -1,5 +1,11 @@
+@font-face {
+    font-family: JetBrainsMono;
+    src: url(../JetBrainsMono.ttf);
+}
+
+
 body{
-    font-family: Jetbrains Mono;
+    font-family: JetBrainsMono;
     background-color: black;
     max-width: 100%;
     min-height: 2000px;
