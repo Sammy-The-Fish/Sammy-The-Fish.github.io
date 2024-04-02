@@ -16,11 +16,15 @@ function loadBackground(){
 }
 
 oldvalue = " 2"
+lastoption = 0
 function changeBackground(newValue, color){
     id2 = setInterval(BackgroundFrame, 25, 100, newValue, color)
     console.log("running")
     backgroundTime = 0
-    option = Math.ceil(Math.random() * 4)
+    do{
+        option = Math.ceil(Math.random() * 4)
+    }while(option == lastoption)
+    lastoption = option
     // option = 5
     function BackgroundFrame(length, newValue, color){
         if(backgroundTime == length){
