@@ -1,0 +1,24 @@
+
+
+#title{
+    font-size: 150px;
+    margin-bottom: 100px;
+}
+
+#options{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.option{
+    margin: 20px;
+    background-color: #302D41;
+    padding: 20px;
+    border-radius: 20px;
+    transition: all 0.2s;
+}
+
+.option:hover{
+    background-color: #575268;
+}

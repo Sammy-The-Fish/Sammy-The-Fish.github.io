@@ -46,6 +46,7 @@ button:hover{
 
 
 button{
+    font-family: JetbrainsMono;
     border-radius: 12px;
     font-size: 24px;
     border: none;
