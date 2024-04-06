@@ -376,7 +376,20 @@ button{
     font-weight: bold;
     color: #000;
 }
+#MainButton{
+    
+    background-color: #575268;
+}
 
+#TwoButton{
+    background-color: black;
+    background-image: url(../LeverSim2/Anouncement/number.svg);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    font-weight: bolder;
+}
 
 
 .GameButton:hover{
