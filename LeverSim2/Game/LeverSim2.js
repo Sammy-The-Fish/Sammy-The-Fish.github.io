@@ -81,7 +81,6 @@ function changeBackground(newValue, color){
 }
 
 
-
 const Lever = document.getElementById("Lever")
 const LeverText = document.getElementById("LeverText")
 const accent = document.querySelector(':root');
