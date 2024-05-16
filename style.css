@@ -180,7 +180,15 @@ button{
 }
 
 
+.content-button {
+    background-color: #1E1D2F;
+    color: #96CDFB;
+    transition: all 0.2s;
+}
 
+.content-button:hover {
+    background-color: #575268;
+}
 
 #HomeDiv{
     grid-column: 1;
