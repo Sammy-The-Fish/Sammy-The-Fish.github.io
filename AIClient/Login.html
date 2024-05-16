@@ -12,16 +12,27 @@
         <div class="login-collum">
             <form id="form-1">
                 <label>IP adress to connect to:</label>
-                <input type="text">
-                <label>port(shouldnt have to change this):</label>
-                <input type="text" style="width: 60px;" value="5000">
+                <br>
+                <input type="text" id="ip-adress">
+                <br>
+                <label>port:</label>
+                <br>
+                <input type="text" style="width: 60px;" value="5000" id="port">
+                <br>
                 <input type="submit" value="submit">
             </form>
         </div>
-        <div class="login-collum">
-            this is a test
+        <div class="login-collum" id="form-2">
+            <button class="content-button">
+                play audio in website (not working)
+            </button>
+            <br>
+            <button class="content-button" id="discord-button">
+                play audio in discord
+            </button>
+            <p id="discord-error"></p>
         </div>
-        <div class="login-collum">
+        <div class="login-collum" id="form-3">
             this is a test
         </div>
     </div>

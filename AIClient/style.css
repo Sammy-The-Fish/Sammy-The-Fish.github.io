@@ -1,14 +1,18 @@
 @font-face {
     font-family: JetBrainsMono;
-    src: url(JetBrainsMono.ttf);
+    src: url(../JetBrainsMono.ttf);
 }
 
-
+:root {
+    --form-one-color: #FAE3B0
+}
 
 body {
     background-color: #1E1D2F;
     font-family: JetbrainsMono;
     overflow-x: hidden;
+    max-height: 100%;
+    overflow-y: hidden;
 }
 
 body, html{
@@ -173,6 +177,8 @@ button{
 
 
 .content-button {
+    padding: 10px;
+    margin: 20px;
     background-color: #1E1D2F;
     color: #96CDFB;
     transition: all 0.2s;
@@ -183,18 +189,24 @@ button{
 }
 
 input[type="text"] {
+    font-size: 15px;
+    margin: 10px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
     border: none;
     background-color: #00000000;
     border-bottom: 2px solid #FAE3B0;
-    color: #FAE3B0;
 }
 
 input[type="submit"] {
+    padding: 5px;
+    margin: auto;
+    margin-top: 20px;
+    font-size: 20px;
     background-color: #575268;
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    color: #FAE3B0;
 }
 
 input {
@@ -207,13 +219,42 @@ input[type="text"]:focus {
 }
 
 .login-collum {
+    margin: 10px;
+    margin-top: 0vh;
     background-color: #302D41;
     width: 100%;
     height: 100%;
-    margin: 10px;
     border-radius: 10px;
     color: #FAE3B0;
     padding: 10px;
+}
+
+#form-1 > input[type="text"] {
+    font-size: 15px;
+    margin: 10px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    border: none;
+    background-color: #00000000;
+    border-bottom: 2px solid var(--form-one-color);
+    color: var(--form-one-color);
+}
+
+#form-1 > input[type="submit"] {
+    color: var(--form-one-color);
+}
+
+
+#form-1 {
+    color: var(--form-one-color);
+}
+
+#form-2 {
+    margin-top: 100vh;
+}
+
+#form-3 {
+    margin-top: 100vh;
 }
 
 #login-div {
