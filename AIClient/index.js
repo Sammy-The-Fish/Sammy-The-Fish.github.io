@@ -59,12 +59,15 @@ function PopulateForm3(data) {
     guilds.forEach(guild => {
         let ListHeading = document.createElement("h2")
         ListHeading.classList.add("server-title")
+        ListHeading.textContent = `${guild.name}`
+
         let ListContent = document.createElement("p")
         let SubList = document.createElement("ol")
-        ListHeading.textContent = `${guild.name}`
+        
         let channels = guild.voice_channels
         channels.forEach(channel => {
             let SubListItem = document.createElement("li")
+
             let button = document.createElement("button")
             button.classList.add("server-button")
             button.textContent = `${channel.name}`
@@ -72,6 +75,7 @@ function PopulateForm3(data) {
             button.addEventListener("click", function () {
                 JoinVoiceCall(button)
             })
+
             SubListItem.appendChild(button)
             SubList.appendChild(SubListItem)
         })
@@ -79,18 +83,37 @@ function PopulateForm3(data) {
         List.appendChild(ListHeading)
         List.appendChild(ListContent)
     })
+    FloatIn(Form3)
 }
 
 function JoinVoiceCall(element) {
     let id = element.id
     let ids = id.split(":")
-    guild_id = Number(ids[0])
-    voice_id = Number(ids[1])
-    console.log(guild_id, voice_id)
+    let guild_id = ids[0]
+    let voice_id = ids[1]
+    let data = {
+        guild_id: guild_id,
+        voice_id: voice_id
+    }
+    fetch(`http://${IpAdress}:${port}/connect_voice`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(result => {
+        // Display the result
+        console.log(result)
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
 }
 
 
-PopulateForm3(ExampleData)
+// PopulateForm3(ExampleData)
 
 var IpAdress = 0;
 var port = 5000;
@@ -111,21 +134,22 @@ Form1.addEventListener("submit", function (event) {
 Form2.style.marginTop
 
 DiscordButton.addEventListener("click", function () {
-    // fetch(`http://${IpAdress}:${port}/discord_test`)
-    // .then(response => {
-    //     if (!response.ok){
-    //         throw new Error("ERROR: " + response.statusText)
-    //     }else if (response.text() == "OFFLINE"){
-    //         throw new Error("ERROR: BOT NOT ONLINE")
-    //     }
-    //     return response.text()
-    // })
-    // .then(data =>
-    //     console.log(data)
-    // )
-    // .catch(error =>{
-    //     DiscordErrorText.innerHTML = error
-    // })
+    fetch(`http://${IpAdress}:${port}/get_guilds`)
+    .then(response => {
+        if (!response.ok){
+            throw new Error("ERROR: " + response.statusText)
+        }
+        // }else if (response.text() == "OFFLINE"){
+        //     throw new Error("ERROR: BOT NOT ONLINE")
+        // }
+        return response.json()
+    })
+    .then(data =>
+        PopulateForm3(data.response)
+    )
+    .catch(error =>{
+        DiscordErrorText.innerHTML = error
+    })
     requestAnimationFrame(() => FloatIn(Form3, 100))
 })
 
