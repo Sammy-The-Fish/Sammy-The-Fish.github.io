@@ -1,5 +1,7 @@
 const Form1 = document.getElementById("form-1")
 const Form2 = document.getElementById("form-2")
+const Form3 = document.getElementById("form-3")
+
 
 const IpAdressField = document.getElementById("ip-adress")
 const PortField = document.getElementById("port")
@@ -7,6 +9,88 @@ const DiscordButton = document.getElementById("discord-button")
 const DiscordErrorText = document.getElementById("discord-error")
 
 console.log("testing")
+
+var ExampleData = {
+    guilds: [
+        {
+            name: "test server 1",
+            id: 98730865087432,
+            voice_channels: [
+                {
+                    name: "test channel 1",
+                    id: 95034582765987
+                },
+                {
+                    name: "gaming channel",
+                    id: 827365876589324
+                },
+                {
+                    name: "another channel",
+                    id: 87356928735
+                }
+            ]
+        },
+        {
+            name: "test server 2",
+            id: 9887730865087432,
+            voice_channels: [
+                {
+                    name: "test channel 1",
+                    id: 43876592752
+                },
+                {
+                    name: "not gamng channel",
+                    id: 734658273
+                },
+                {
+                    name: "another channel",
+                    id: 3286375964329856328756293874
+                }
+            ]
+        }
+
+    ]
+}
+
+
+function PopulateForm3(data) {
+    const List = document.getElementById("guild-list")
+    let guilds = data.guilds
+    guilds.forEach(guild => {
+        let ListHeading = document.createElement("h2")
+        ListHeading.classList.add("server-title")
+        let ListContent = document.createElement("p")
+        let SubList = document.createElement("ol")
+        ListHeading.textContent = `${guild.name}`
+        let channels = guild.voice_channels
+        channels.forEach(channel => {
+            let SubListItem = document.createElement("li")
+            let button = document.createElement("button")
+            button.classList.add("server-button")
+            button.textContent = `${channel.name}`
+            button.id = `${guild.id}:${channel.id}`
+            button.addEventListener("click", function () {
+                JoinVoiceCall(button)
+            })
+            SubListItem.appendChild(button)
+            SubList.appendChild(SubListItem)
+        })
+        ListContent.appendChild(SubList)
+        List.appendChild(ListHeading)
+        List.appendChild(ListContent)
+    })
+}
+
+function JoinVoiceCall(element) {
+    let id = element.id
+    let ids = id.split(":")
+    guild_id = Number(ids[0])
+    voice_id = Number(ids[1])
+    console.log(guild_id, voice_id)
+}
+
+
+PopulateForm3(ExampleData)
 
 var IpAdress = 0;
 var port = 5000;
@@ -27,21 +111,22 @@ Form1.addEventListener("submit", function (event) {
 Form2.style.marginTop
 
 DiscordButton.addEventListener("click", function () {
-    fetch(`http://${IpAdress}:${port}/discord_test`)
-    .then(response => {
-        if (!response.ok){
-            throw new Error("ERROR: " + response.statusText)
-        }else if (response.text() == "OFFLINE"){
-            throw new Error("ERROR: BOT NOT ONLINE")
-        }
-        return response.text()
-    })
-    .then(data =>
-        console.log(data)
-    )
-    .catch(error =>{
-        DiscordErrorText.innerHTML = error
-    })
+    // fetch(`http://${IpAdress}:${port}/discord_test`)
+    // .then(response => {
+    //     if (!response.ok){
+    //         throw new Error("ERROR: " + response.statusText)
+    //     }else if (response.text() == "OFFLINE"){
+    //         throw new Error("ERROR: BOT NOT ONLINE")
+    //     }
+    //     return response.text()
+    // })
+    // .then(data =>
+    //     console.log(data)
+    // )
+    // .catch(error =>{
+    //     DiscordErrorText.innerHTML = error
+    // })
+    requestAnimationFrame(() => FloatIn(Form3, 100))
 })
 
 

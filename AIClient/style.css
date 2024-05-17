@@ -188,6 +188,26 @@ button{
     background-color: #575268;
 }
 
+.server-button {
+    font-size: medium;
+    background-color: #00000000;
+    color: #96CDFB;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: color 0.2s; 
+}
+
+.server-title {
+    font-size: larger;
+    padding: 0px;
+    margin: 0px;
+    margin-top: 5px;
+}
+
+.server-buttons:hover {
+    color: #DDB6F2;
+}
+
 input[type="text"] {
     font-size: 15px;
     margin: 10px;
