@@ -188,6 +188,15 @@ button{
     background-color: #575268;
 }
 
+.content-button:disabled {
+    color: #928f9b;
+    background-color: #575268;
+    cursor: default;
+}
+
+
+
+
 .server-button {
     font-size: medium;
     background-color: #00000000;
@@ -206,6 +215,11 @@ button{
 
 .server-buttons:hover {
     color: #DDB6F2;
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
 }
 
 input[type="text"] {
@@ -227,6 +241,10 @@ input[type="submit"] {
     border: none;
     border-radius: 10px;
     cursor: pointer;
+}
+
+input[type="submit"]:disabled {
+    cursor: default;
 }
 
 input {

@@ -3,7 +3,6 @@ const ProjectButton = document.getElementById("ProjectButton")
 const ContactButton = document.getElementById("ContactButton")
 const LinuxButton = document.getElementById("LinuxButton")
 
-
 let Menu = [HomeButton, ProjectButton, ContactButton, LinuxButton]
 
 

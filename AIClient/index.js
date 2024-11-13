@@ -6,9 +6,11 @@ const Form3 = document.getElementById("form-3")
 const IpAdressField = document.getElementById("ip-adress")
 const PortField = document.getElementById("port")
 const DiscordButton = document.getElementById("discord-button")
-const DiscordErrorText = document.getElementById("discord-error")
+const BrowserButton = document.getElementById("browser-button")
 
-console.log("testing")
+const Form2Error = document.getElementById("form-two-error")
+const Form1Error = document.getElementById("form-one-error")
+
 
 var ExampleData = {
     guilds: [
@@ -118,17 +120,11 @@ function JoinVoiceCall(element) {
 var IpAdress = 0;
 var port = 5000;
 
-Form1.addEventListener("submit", function (event) {
+Form1.addEventListener("submit", function (event){
     event.preventDefault()
     IpAdress = IpAdressField.value
     port = PortField.value
-    let FormElement = Form1.children
-    Array.from(FormElement).forEach(element => {
-        element.disabled = true
-    });
-    document.documentElement.style.setProperty("--form-one-color", "#8f8f8f")
     CheckOnline(IpAdress, port)
-    requestAnimationFrame(() =>  FloatIn(Form2, 100))
 })
 
 Form2.style.marginTop
@@ -145,12 +141,14 @@ DiscordButton.addEventListener("click", function () {
         return response.json()
     })
     .then(data =>
-        PopulateForm3(data.response)
+        {
+            PopulateForm3(data.response)
+            Form2Success()
+        }
     )
     .catch(error =>{
-        DiscordErrorText.innerHTML = error
+        Form2Error.innerHTML = error
     })
-    requestAnimationFrame(() => FloatIn(Form3, 100))
 })
 
 
@@ -158,16 +156,39 @@ function CheckOnline(ip, port){
     fetch(`http://${ip}:${port}/test`)
         .then(response => {
             if (!response.ok){
-                console.error("there was an error")
+                throw new Error("ERROR: + " + response.statusText)
             }
             return response.text()
         })
-        .then(data =>
-            console.log(data)
+        .then(data => {
+                if (data != "alive"){
+                    throw new Error("tbh, somethings gone really really wrong, your on your own now 😢")
+                }
+                Form1Success()
+            }
         )
         .catch(error =>{
-            console.error("there was an eroor, but ir went here")
+            Form1Error.innerHTML = error
         })
+}
+
+function Form1Success(){
+    Form1Error.innerHTML = ""
+    requestAnimationFrame(() =>  FloatIn(Form2, 100))
+    let FormElement = Form1.children
+    document.documentElement.style.setProperty("--form-one-color", "#928f9b")
+    Array.from(FormElement).forEach(element => {
+        element.disabled = true
+    });
+}
+
+function Form2Success(){
+    Form2Error.innerHTML = ""
+    requestAnimationFrame(() => FloatIn(Form3, 100))
+    const header = document.getElementById("form-two-header")
+    header.style.color = "#928f9b"
+    DiscordButton.disabled = true
+    BrowserButton.disabled = true
 }
 
 
