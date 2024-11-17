@@ -1,16 +1,13 @@
 # PowerShell script to change the desktop wallpaper from a URL
 param (
-    [string]$imageUrl = "!!!!!!!!!!!!!!!!!!PUT URL HERE!!!!!!!!!!!!!!!!!!!",
-    [string]$localPath = "$env:USERPROFILE\Downloads\wallpaper.jpg"
+    [string]$imageUrl = "https://imageswitcher.onrender.com/picture",
+    [string]$localPath = "$env:USERPROFILE\Downloads\wallpaper.jpg"  # Always saves to the same file
 )
 
-# Download the image from the URL
-Invoke-WebRequest -Uri $imageUrl -OutFile $localPath
+# Download the image from the URL and overwrite the file if it already exists
+Invoke-WebRequest -Uri $imageUrl -OutFile $localPath -ErrorAction Stop
 
-# Add some delay to ensure the file is fully downloaded before proceeding
-Start-Sleep -Seconds 3
-
-# Check if the image was downloaded
+# Check if the image was downloaded successfully
 if (Test-Path $localPath) {
     # Use the SystemParametersInfo function to set the wallpaper
     Add-Type @"
@@ -23,7 +20,7 @@ if (Test-Path $localPath) {
 "@
     # Set wallpaper action code (20) and apply the wallpaper
     [Wallpaper]::SystemParametersInfo(0x0014, 0, $localPath, 0x0001)
-    
+
     Write-Host "Wallpaper updated successfully!"
 } else {
     Write-Host "Failed to download image."
