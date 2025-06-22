@@ -98,12 +98,13 @@ function CrankLever(profesional){
     num = Math.floor((Math.random() * 3) + 1)
 
     time = 0
-    id = setInterval(Frame, 5)
+    // id = setInterval(Frame, 1)
+    requestAnimationFrame(Frame)
     function Frame(){
         if(time == 320){
             // prob = Math.random()
             LeverText.innerHTML = "<center>" + num + "</center>"
-            clearInterval(id)
+            // clearInterval(id)
             return
         }
         let stageLength = 80
@@ -111,6 +112,7 @@ function CrankLever(profesional){
         time++
         switch (stage){
             case 0:
+                time++
                 Lever.style.transform = "rotate(" + (time-45) + "deg)"
                 break
             case 3:
@@ -172,8 +174,9 @@ function CrankLever(profesional){
                     }
                     LeverText.innerHTML = "<center>" + num + "</center>"
             }
-            
 
         }
+        requestAnimationFrame(Frame)
+
     }
 }

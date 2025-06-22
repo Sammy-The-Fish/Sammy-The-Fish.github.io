@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./style.css" />
+		<title>Lever Simulator 3</title>
+	</head>
+	<body>
+		<div class="title-container">
+			<img src="./images/Group 3.svg" class="title" />
+		</div>
+		<div class="description-container">
+			<div class="description">
+				<h2>Simplicity through complexity</h2>
+				<ul>
+					<li>pulling the lever will produce a number</li>
+					<li>you should then push the next lever</li>
+					<li>then a third and final lever</li>
+				</ul>
+				These numbers are arranged such that the value following the "." is 10
+				times smaller than the value before the ".". To calculate the final
+				score these values are added. This therefore means if the value to the
+				right of the "." exceeds 9, the value to the left of the "." increments
+				by one, additionally the amount by which this sum exceeds 9 will remain
+				to the right of the ".". Finally if the value to the left of the "."
+				exceeds 9, another number will be used to the right this value, these
+				will not be separated by a "." but the value will nonetheless represent
+				10 of the values to the right of it.
+			</div>
+		</div>
+
+		<div class="game-container" id="game-container">
+			<div class="display-layer">
+				<div class="lever-frame">
+					<div class="lever-text">0</div>
+				</div>
+				<div class="lever-frame">
+					<div class="lever-text">0</div>
+				</div>
+				<div class="lever-frame">
+					<div class="lever-text">0</div>
+				</div>
+			</div>
+			<div class="lever-guide-layer">
+				<div class="lever-guide-window" id="lever-pos"></div>
+				<div class="lever-guide-window"></div>
+				<div class="lever-guide-window"></div>
+			</div>
+			<div class="lever-layer">
+				<div class="lever" id="lever">
+					<div id="lever-window"></div>
+					<div class="lever-base-container">
+						<img src="./images/leverBase.png" width="150" class="lever-base" />
+					</div>
+					<div class="lever-base-container">
+						<img
+							src="./images/leverHead.png"
+							width="50"
+							class="lever-head"
+							id="lever-head"
+						/>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="total-container">
+
+		</div>
+		<script src="./index.js"></script>
+	</body>
+</html>

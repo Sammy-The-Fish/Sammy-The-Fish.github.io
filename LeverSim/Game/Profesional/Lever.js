@@ -90,7 +90,7 @@ function CrankAgain(num){
     }
     if (round == 2){
         decrankify()
-        LeverNotifText.innerHTML = "<center>Congrats, on your " + score + " points <a href='./LeverSimProf.html'>restart</a></center>"
+        LeverNotifText.innerHTML = "<center>Congrats, on your " + score + " points <a href='/LeverSim/Game/Profesional/index.html'>restart</a></center>"
     }
 }
 

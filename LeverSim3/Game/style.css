@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+body {
+	font-family: inter;
+}
+
+h1 {
+	text-align: center;
+	font-family: inter;
+	font-size: 128px;
+	margin: 50px;
+}
+
+.title-container {
+	display: flex;
+	justify-content: center;
+}
+
+.title {
+	width: 50%;
+	padding: auto;
+}
+
+.description-container {
+	display: flex;
+	justify-content: center;
+}
+
+.description {
+	max-width: 750px;
+	/* text-align: center; */
+	padding-right: 50px;
+	border-bottom: 2px solid black;
+	margin: 50px;
+}
+
+.display-layer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	width: 100%;
+	/* height: 100%; */
+}
+
+.lever-frame {
+	/* padding: 50px; */
+	border-radius: 15px;
+	border: 2px solid black;
+	/* padding-left: 100px; */
+	/* padding-right: 100px; */
+	width: 400px;
+	height: 300px;
+	padding: auto;
+	display: flex;
+	justify-content: center;
+}
+
+.lever-guide-layer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	pointer-events: none;
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	width: 100%;
+	/* height: 100%; */
+}
+
+.lever-text {
+	font-size: 200px;
+	text-align: center;
+	vertical-align: middle;
+	margin: auto;
+}
+
+.lever-guide-window {
+	height: 300px;
+	width: 400px;
+	background-color: 00000000;
+	/* backdrop-filter: invert(1); */
+	border-radius: 15px;
+	border: 2px solid;
+}
+
+#lever {
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	height: 300px;
+	width: 400px;
+	align-items: center;
+}
+
+#lever-window {
+	width: 100%;
+	height: 100%;
+	background-color: 00000000;
+	backdrop-filter: invert(1);
+	border-radius: 15px;
+	border: 2px solid;
+}
+
+.lever-layer {
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	width: 100%;
+	/* height: 100%; */
+}
+
+.lever-base-container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	cursor: pointer;
+}
+.lever-base {
+	padding-left: auto;
+	padding-right: auto;
+}
+
+.lever-head {
+	margin-top: -55%;
+	transform: rotate(70deg);
+}
+
+.total-padding {
+	/* min-width: 50%; */
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 50vh;
+	padding-bottom: 50vh;
+}
+
+.reset-link {
+	font-size: 24px;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.total {
+	margin-left: 0px;
+	margin-bottom: 0px;
+}
+
+#total-container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
