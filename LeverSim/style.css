@@ -1,94 +1,88 @@
 @font-face {
-    font-family: JetBrainsMono;
-    src: url(../JetBrainsMono.ttf);
+	font-family: JetBrainsMono;
+	src: url(../JetBrainsMono.ttf);
 }
-
-
 
 body {
-    background-color: #1E1D2F;
-    font-family: JetbrainsMono;
-    height: 200%;
-    overflow-x: hidden;
-    max-height: 100%;
-    position: relative
+	background-color: #1e1d2f;
+	font-family: JetbrainsMono;
+	height: 200%;
+	overflow-x: hidden;
+	max-height: 100%;
+	position: relative;
 }
 
-body, html{
-    max-width: 100%;
-    overflow-x: hidden;
+body,
+html {
+	max-width: 100%;
+	overflow-x: hidden;
 }
 
-h1{
-    color: #F28FAD;
-    font-size: 104px;
-    margin: 0px;
+h1 {
+	color: #f28fad;
+	font-size: 104px;
+	margin: 0px;
 }
 
-
-h2{
-    color: #F28FAD;
-    font-size: 32px;
-    margin: 0px;
+h2 {
+	color: #f28fad;
+	font-size: 32px;
+	margin: 0px;
 }
 
-a:link{
-    color: #96CDFB;
+a:link {
+	color: #96cdfb;
 }
 
-a:visited{
-    color: #DDB6F2
+a:visited {
+	color: #ddb6f2;
 }
 
-button:hover{
-    cursor: pointer;
+button:hover {
+	cursor: pointer;
 }
 
-
-button{
-    border-radius: 12px;
-    font-size: 24px;
-    border: none;
-    color: #F28FAD;
+button {
+	border-radius: 12px;
+	font-size: 24px;
+	border: none;
+	color: #f28fad;
 }
 
-
-.image{
-    margin-left: 25%;
-    margin-right: 25%;
-    width: 50%;
-    border-radius: 20px;
-    border: solid #575268 5px;
+.image {
+	margin-left: 25%;
+	margin-right: 25%;
+	width: 50%;
+	border-radius: 20px;
+	border: solid #575268 5px;
 }
 
-
-.MenuButton{
-    background-color: #302D41;
-    border: #00000000;
-    color: #ABE9B3;
-    border-radius: 30px;
-    padding: 5px;
-    font-family: JetbrainsMono;
-    font-size: 20px;
-    transition: all 0.25s;
+.MenuButton {
+	background-color: #302d41;
+	border: #00000000;
+	color: #abe9b3;
+	border-radius: 30px;
+	padding: 5px;
+	font-family: JetbrainsMono;
+	font-size: 20px;
+	transition: all 0.25s;
 }
-.MenuButton:hover{
-    background-color: #575268;
-}
-
-
-.contentHeader{
-    padding: 5px;
+.MenuButton:hover {
+	background-color: #575268;
 }
 
-.content{
-    position: relative;
-    background-color: #302D41;
-    color: #FAE3B0;
-    border-radius: 20px;
-    margin: 25px;
-    padding: 10px;
-    /* transition: all 0.5s; */
+.contentHeader {
+	padding: 5px;
+}
+
+.content {
+	position: relative;
+	background-color: #302d41;
+	color: #fae3b0;
+	border-radius: 20px;
+	margin: 25px;
+	padding: 10px;
+	/* transition: all 0.5s; */
 }
 
 /* .content:hover{
@@ -96,321 +90,323 @@ button{
     padding: 2px;
 } */
 
-
-.front{
-    margin-top: 200%;
+.front {
+	margin-top: 200%;
 }
 
-.frontRight{
-    margin-top: 250%
+.frontRight {
+	margin-top: 250%;
 }
 
 .center {
-    width: 30%;
-    padding: 10px;
+	width: 30%;
+	padding: 10px;
 }
 
-.horizontal{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;    
+.horizontal {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
-.vertical{
-    display: flex;
-    justify-content: start;
-    flex-direction: column;
+.vertical {
+	display: flex;
+	justify-content: start;
+	flex-direction: column;
 }
 
-.MenuBar{
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 30px;
-    height:auto;
-    padding: 5px;
-    background-color: #302D41;
-    color: #F2CDCD;
-    border-radius: 30px;
-    display: flex;
-    justify-content: space-around;
+.MenuBar {
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 30px;
+	height: auto;
+	padding: 5px;
+	background-color: #302d41;
+	color: #f2cdcd;
+	border-radius: 30px;
+	display: flex;
+	justify-content: space-around;
 }
 
-.MenuBarItem{
-    margin: 5px;
-    padding-left: 15px;
-    padding-right: 100px;
-    display: flex;
-    justify-content: space-around;
+.MenuBarItem {
+	margin: 5px;
+	padding-left: 15px;
+	padding-right: 100px;
+	display: flex;
+	justify-content: space-around;
 }
 
-.page{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    justify-self: center;  
-    grid-row: 0; 
+.page {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	justify-self: center;
+	grid-row: 0;
 }
 
-
-.pages{
-    position: relative;
-    height: 100%;
-    width: 100%;
-    display: grid;
-    grid-template-rows: 100%;
-    left: 0%;
-    grid-template-columns: 100% 100% 100% 100%;
+.pages {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	display: grid;
+	grid-template-rows: 100%;
+	left: 0%;
+	grid-template-columns: 100% 100% 100% 100%;
 }
 
-.fakeLink{
-    cursor: pointer;
-    color: #96CDFB;
-    text-decoration: underline;
+.fakeLink {
+	cursor: pointer;
+	color: #96cdfb;
+	text-decoration: underline;
 }
 
-.MusicPlayer{
-    background-color: #575268;
-    color: #FAE3B0;
-    border-radius: 20px;
-    margin: 25px;
-    padding: 10px;
-    width: 50%;
+.MusicPlayer {
+	background-color: #575268;
+	color: #fae3b0;
+	border-radius: 20px;
+	margin: 25px;
+	padding: 10px;
+	width: 50%;
 }
 
-
-
-
-#HomeDiv{
-    grid-column: 1;
-    margin-top: 00%;
-    grid-row: 1; 
-
+#HomeDiv {
+	grid-column: 1;
+	margin-top: 00%;
+	grid-row: 1;
 }
 
-#ProjectDiv{
-    grid-column: 2;
-    grid-row: 1; 
-
+#ProjectDiv {
+	grid-column: 2;
+	grid-row: 1;
 }
 
-#ContactDiv{
-    grid-column: 3;
-    grid-row: 1; 
-
+#ContactDiv {
+	grid-column: 3;
+	grid-row: 1;
 }
 
-#LinuxDiv{
-    grid-column: 4;
-    grid-row: 1; 
-
+#LinuxDiv {
+	grid-column: 4;
+	grid-row: 1;
 }
 
-
-#LeverSimButton{
-    color: black;
+#LeverSimButton {
+	color: black;
 }
 
-#leverbox{
-    height: 100%;
-    width: 50%;
-    margin-right: 0px;
-    z-index: 2;
+#leverbox {
+	height: 100%;
+	width: 50%;
+	margin-right: 0px;
+	z-index: 2;
 }
-#LeverText{
-    font-size: 400px;
-    color: #575268;
-}
-
-#LeverGame{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-#LeverBase{
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: -10px;
-    background-color: #00000000;
-    border: 0px;
-    z-index: 2;
+#LeverText {
+	font-size: 400px;
+	color: #575268;
 }
 
-
-#LeverButton{
-    background-color: #00000000;
-    z-index: 1;
+#LeverGame {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+#LeverBase {
+	margin-top: auto;
+	margin-bottom: auto;
+	margin-left: -10px;
+	background-color: #00000000;
+	border: 0px;
+	z-index: 2;
 }
 
-#Lever{
-    cursor: pointer;
-    margin-top: auto;
-    margin-bottom: auto;
-    background-color: #00000000;
-    margin-right: 0px;
-    margin-left: -190px;
-    transform: rotate(-45deg);
-    z-index: 1;
+#LeverButton {
+	background-color: #00000000;
+	z-index: 1;
 }
 
-
-#TotalBlock{
-    margin: auto;
-    margin-right: 10px;
-    padding: 20px;
+#Lever {
+	cursor: pointer;
+	margin-top: auto;
+	margin-bottom: auto;
+	background-color: #00000000;
+	margin-right: 0px;
+	margin-left: -190px;
+	transform: rotate(-45deg);
+	z-index: 1;
 }
 
-#TotalText{
-    padding:10px;
-    padding-top: 0px;
-    font-size: 124px;
+#TotalBlock {
+	margin: auto;
+	margin-right: 10px;
+	padding: 20px;
 }
 
-#TheWordTotalText{
-    padding: 10px;
-    padding-bottom: 0px;
-    margin: 0px;
-    color:#F28FAD;
+#TotalText {
+	padding: 10px;
+	padding-top: 0px;
+	font-size: 124px;
 }
 
-#LeverNotif{
-    width: 50%;
-    padding: 5px;
-    margin: auto;
+#TheWordTotalText {
+	padding: 10px;
+	padding-bottom: 0px;
+	margin: 0px;
+	color: #f28fad;
 }
 
-#HomePage{
-    margin-left: auto;
-    margin-right: auto;
-    display: grid;
-    width:fit-content;
-    width: 90%;
-    gap: 0px;
-    grid-template-columns: 20% 80%;
-    grid-template-rows: 20% 80%;
-    height: 1000px;
+#LeverNotif {
+	width: 50%;
+	padding: 5px;
+	margin: auto;
 }
 
-#LeverDescription{
-    padding-bottom: 10px;
-    grid-row: 1;
-    grid-column: 1 / span 2;
+#HomePage {
+	margin-left: auto;
+	margin-right: auto;
+	display: grid;
+	width: fit-content;
+	width: 90%;
+	gap: 0px;
+	grid-template-columns: 20% 80%;
+	grid-template-rows: 20% 80%;
+	height: 1000px;
 }
 
-#GameSelect{
-    background-color: #1E1D2F;
-    grid-row: 2;
-    grid-column: 1;
-    border-radius: 0px;
-    padding: 0px;
+#LeverDescription {
+	padding-bottom: 10px;
+	grid-row: 1;
+	grid-column: 1 / span 2;
 }
 
-#LeverNews{
-    grid-row: 2;
-    grid-column: 2;
+#GameSelect {
+	background-color: #1e1d2f;
+	grid-row: 2;
+	grid-column: 1;
+	border-radius: 0px;
+	padding: 0px;
 }
 
-.GameButton{
-    font-family: JetBrainsMono;
-    font-size: 20px;
-    min-height: 75px;
-    margin-top: 0px;
-    margin-top: -5px;
-    margin-bottom: -3px;
-    border-radius: 0px;
-    background-color: #302D41;
-    transition: all 0.3s ease;
-    margin-left: 0px;
-    margin-right: 0px;
-    border: #302D41 10px solid;
-    width: 100%;
+#LeverNews {
+	grid-row: 2;
+	grid-column: 2;
 }
 
-#TopBorder{
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
-    min-height: 30px;
-    height: 5px;
-    max-height: 30px;
-    border-bottom: -5px;
+.GameButton {
+	font-family: JetBrainsMono;
+	font-size: 20px;
+	min-height: 75px;
+    max-height: 75px;
+	margin-top: 0px;
+	margin-top: -5px;
+	margin-bottom: -3px;
+	border-radius: 0px;
+	background-color: #302d41;
+	transition: all 0.3s ease;
+	margin-left: 0px;
+	margin-right: 0px;
+	border: #302d41 10px solid;
+	width: 100%;
 }
 
-#TopBorder:hover{
-    cursor: default;
-    font-size: none;
-    padding-right: none;
-    width: 100%;
-    background-color: #302D41;
-
+#TopBorder {
+	border-top-right-radius: 20px;
+	border-top-left-radius: 20px;
+	min-height: 30px;
+	height: 5px;
+	max-height: 30px;
+	border-bottom: -5px;
 }
 
-#BottomBorder{
-    margin-top: -10px;
-    padding: 0px;
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-    min-height: 30px;
-    height: 5px;
-    max-height: 30px;
+#TopBorder:hover {
+	cursor: default;
+	font-size: none;
+	padding-right: none;
+	width: 100%;
+	background-color: #302d41;
 }
 
-#BottomBorder:hover{
-    cursor: default;
-    font-size: none;
-    padding-right: none;
-    width: 100%;
-    background-color: #302D41;
-
+#BottomBorder {
+	margin-top: -10px;
+	padding: 0px;
+	border-bottom-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+	min-height: 30px;
+	height: 5px;
+	max-height: 30px;
 }
 
-#CompButton{
-    background-color: black;
-    color: red;
-    font-style: oblique;
-    font-weight: bolder;
+#BottomBorder:hover {
+	cursor: default;
+	font-size: none;
+	padding-right: none;
+	width: 100%;
+	background-color: #302d41;
 }
 
-#ClassicButton{
-    background-color: #FFF;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: bold;
-    color: #000;
-}
-#MainButton{
-    
-    background-color: #575268;
+#CompButton {
+	background-color: black;
+	color: red;
+	font-style: oblique;
+	font-weight: bolder;
 }
 
-#TwoButton{
-    background-color: black;
-    background-image: url(../LeverSim2/Anouncement/number.svg);
-    background-size: 30px;
-    background-repeat: no-repeat;
-    background-position: center;
-    color: white;
-    font-weight: bolder;
+#ClassicButton {
+	background-color: #fff;
+	font-family: "Times New Roman", Times, serif;
+	font-weight: bold;
+	color: #000;
+}
+#MainButton {
+	background-color: #575268;
 }
 
-
-.GameButton:hover{
-    font-size: 20px;
-    padding: 10px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    /* padding-right: 10%; */
-    width: 110%;
-    border-bottom-right-radius: 5px;
-    border-top-right-radius: 5px;
-    /* background-color: #575268; */
+#TwoButton {
+	background-color: black;
+	background-image: url(../LeverSim2/Anouncement/number.svg);
+	background-size: 30px;
+	background-repeat: no-repeat;
+	background-position: center;
+	color: white;
+	font-weight: bolder;
 }
 
-
-.news{
-    background-color: #575268;
+.GameButton:hover {
+	font-size: 20px;
+	padding: 10px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	/* padding-right: 10%; */
+	width: 110%;
+	border-bottom-right-radius: 5px;
+	border-top-right-radius: 5px;
+	/* background-color: #575268; */
 }
 
-#lever-sim-2-announcement{
-    background-color: #000;
-    color: white;
-    border: 2px red solid;
+.news {
+	background-color: #575268;
+}
+
+#lever-sim-2-announcement {
+	background-color: #000;
+	color: white;
+	border: 2px red solid;
+}
+
+#ThreeButton {
+	display: flex;
+	background-color: white;
+	padding: 0px;
+	align-items: center;
+	flex-direction: column;
+	max-height: none;
+	font-family: inter;
+	color: #000;
+	text-decoration: none;
+}
+
+.lever-sim-three-button {
+	width: 200px;
+	padding: 0px;
+	margin: 0px;
 }

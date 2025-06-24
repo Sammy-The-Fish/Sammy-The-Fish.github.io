@@ -95,7 +95,7 @@ function simulateNumberGeneration(time = 0) {
 
 	time++;
 
-	if (time >= 200) {
+	if (time >= 100) {
 		total = total + parseFloat(number);
 		requestAnimationFrame((t) => rotateLever(-70, 70, incrementIndex));
 		return;
@@ -120,7 +120,7 @@ function finalLeverPulled() {
 	locked = true;
 	totalContainer.innerHTML = `			<div class="total-padding">
 				<h1 class="total"><u>total: </u>${total.toString().split(0,3)}</h1>
-				<a class="reset-link" href="./index.htm">reset</a>
+				<a class="reset-link" href="./">reset</a>
 			</div>`;
 	window.scrollTo({
 		top: document.body.scrollHeight,
@@ -149,7 +149,7 @@ function rotateLever(
 
 	let delta = startRotation >= endRotation ? -1 : 1;
 
-	rotated += delta * 2;
+	rotated += delta * 3;
 
 	leverButton.style.transform = `rotate(${startRotation + rotated}deg)`;
 

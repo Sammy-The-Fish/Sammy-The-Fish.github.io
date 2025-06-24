@@ -13,7 +13,7 @@ function CrankLever(profesional){
     let num = Math.floor((Math.random() * 3) + 1)
 
     time = 0
-    id = setInterval(Frame, 5)
+    id = setInterval(Frame)
     function Frame(){
         if(time == 320){
             Pulling = false
@@ -25,7 +25,7 @@ function CrankLever(profesional){
         }
         let stageLength = 80
         stage = Math.floor(time/stageLength)
-        time++
+        time+=2
         switch (stage){
             case 0:
                 Lever.style.transform = "rotate(" + (time-45) + "deg)"
